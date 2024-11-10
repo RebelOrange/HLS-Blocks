@@ -42,7 +42,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib
 INFO: [VRFC 10-311] analyzing module ctrlport_endpoint
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/gray2bin.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module gray2bin
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/noc_shell_testblock.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/noc_shell_testblock.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module noc_shell_testblock
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_stretch_min.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pulse_stretch_min
@@ -55,13 +55,15 @@ INFO: [VRFC 10-311] analyzing module ram_2port_impl_lutram
 INFO: [VRFC 10-311] analyzing module ram_2port_impl_bram
 INFO: [VRFC 10-311] analyzing module ram_2port_impl_uram
 INFO: [VRFC 10-311] analyzing module ram_2port
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rfnoc_block_testblock
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module synchronizer
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module synchronizer_impl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3824] variable 'ret' must explicitly be declared as automatic or static [/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv:52]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv" into library xil_defaultlib
@@ -76,7 +78,7 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usr
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/sim_clock_gen.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sim_clock_gen
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock_tb.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rfnoc_block_testblock_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl

@@ -1,0 +1,21 @@
+Time resolution is 1 ps
+========================================================
+TESTBENCH STARTED: rfnoc_block_nlms_tb
+========================================================
+[TEST CASE   1] (t =         0 ns) BEGIN: Flush block then reset it...
+[TEST CASE   1] (t =      2455 ns) DONE... Passed
+[TEST CASE   2] (t =      2455 ns) BEGIN: Verify Block Info...
+[TEST CASE   2] (t =      2455 ns) DONE... Passed
+[TEST CASE   3] (t =      2455 ns) BEGIN: <Name your first test>...
+Warning: This testbench doesn't test anything yet!
+Time: 2455 ns  Iteration: 2  Process: /rfnoc_block_nlms_tb/Initial155_869  Scope: rfnoc_block_nlms_tb.tb_main  File: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/rfnoc_block_nlms_tb.sv Line: 188
+[TEST CASE   3] (t =      2455 ns) DONE... Passed
+========================================================
+TESTBENCH FINISHED: rfnoc_block_nlms_tb
+ - Time elapsed:  2455 ns
+ - Tests Run:     3
+ - Tests Passed:  3
+ - Tests Failed:  0
+Result: PASSED   
+========================================================
+$finish called at time : 2455 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102

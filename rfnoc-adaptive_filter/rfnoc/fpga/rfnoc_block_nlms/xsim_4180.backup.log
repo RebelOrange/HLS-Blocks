@@ -1,0 +1,495 @@
+#-----------------------------------------------------------
+# Vivado v2021.1_AR76780 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Nov  6 12:28:15 2024
+# Process ID: 4180
+# Current directory: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms
+# Command line: vivado -mode batch -source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl -log xsim.log -nojournal
+# Log file: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim.log
+# Journal file: 
+#-----------------------------------------------------------
+source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl
+# set simulator       $::env(VIV_SIMULATOR)
+# set design_srcs     $::env(VIV_DESIGN_SRCS)
+# set sim_srcs        $::env(VIV_SIM_SRCS)
+# set inc_srcs        $::env(VIV_INC_SRCS)
+# set sim_top         $::env(VIV_SIM_TOP)
+# set part_name       $::env(VIV_PART_NAME)
+# set sim_runtime     $::env(VIV_SIM_RUNTIME)
+# set sim_fast        $::env(VIV_SIM_FAST)
+# set vivado_mode     $::env(VIV_MODE)
+# set verilog_defs    $::env(VIV_VERILOG_DEFS)
+# set working_dir     [pwd]
+# set sim_fileset "sim_1"
+# set project_name "[string tolower $simulator]_proj"
+# if [info exists ::env(VIV_SIM_COMPLIBDIR) ] {
+#     set sim_complibdir  $::env(VIV_SIM_COMPLIBDIR)
+#     if [expr [file isdirectory $sim_complibdir] == 0] {
+#         set sim_complibdir  ""
+#     }
+# } else {
+#     set sim_complibdir  ""
+# }
+# if [expr ([string equal $simulator "XSim"] == 0) && ([string length $sim_complibdir] == 0)] {
+#     puts "BUILDER: \[ERROR\]: Could not resolve the location for the compiled simulation libraries."
+#     puts "                  Please build libraries for chosen simulator and set the env or"
+#     puts "                  makefile variable SIM_COMPLIBDIR to point to the location."
+#     exit 1
+# }
+# puts "BUILDER: Creating Vivado simulation project part $part_name"
+BUILDER: Creating Vivado simulation project part xc7k410tffg900-2
+# puts "BUILDER: Overriding part name to Zynq 7000 SoC: xc7z020-clg484-3"
+BUILDER: Overriding part name to Zynq 7000 SoC: xc7z020-clg484-3
+# set part_name xc7z020clg484-3
+# create_project -part $part_name -force $project_name/$project_name
+# foreach src_file $design_srcs {
+#     if [expr [file isdirectory $src_file] == 1] {
+#         puts "BUILDER: Expanding Directory : $src_file"
+#         set dir_contents [glob $src_file/*.*]
+#         append design_srcs " " $dir_contents
+#     }
+# }
+# foreach src_file $design_srcs {
+#     set src_ext [file extension $src_file ]
+#     if [expr [lsearch {.vhd .vhdl} $src_ext] >= 0] {
+#         puts "BUILDER: Adding VHDL    : $src_file"
+#         read_vhdl $src_file
+#     } elseif [expr [lsearch {.v .vh} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Verilog : $src_file"
+#         read_verilog $src_file
+#     } elseif [expr [lsearch {.sv .svh} $src_ext] >= 0] {
+#         puts "BUILDER: Adding SVerilog: $src_file"
+#         read_verilog -sv $src_file
+#     } elseif [expr [lsearch {.xdc} $src_ext] >= 0] {
+#         puts "BUILDER: Adding XDC     : $src_file"
+#         read_xdc $src_file
+#     } elseif [expr [lsearch {.xci} $src_ext] >= 0] {
+#         puts "BUILDER: Adding IP      : $src_file"
+#         read_ip $src_file
+#     } elseif [expr [lsearch {.ngc .edif} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Netlist : $src_file"
+#         read_edif $src_file
+#     } elseif [expr [lsearch {.dat} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Data File : $src_file"
+#         add_files -fileset $sim_fileset -norecurse $src_file
+#     } elseif [expr [lsearch {.bd} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Block Diagram: $src_file"
+#         add_files -norecurse $src_file
+#     } elseif [expr [lsearch {.bxml} $src_ext] >= 0] {
+#         puts "BUILDER: Adding Block Diagram XML: $src_file"
+#         add_files -norecurse $src_file
+#     } else {
+#         puts "BUILDER: \[WARNING\] File ignored!!!: $src_file"
+#     }
+# }
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_demux4.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_demux8.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_demux.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo32_to_fifo64.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo64_to_fifo32.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo32_to_fifo16.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo16_to_fifo32.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_cascade.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop2.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_short.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_filter_mux4.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_loopback.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_mux4.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_mux8.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_mux_select.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_mux.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_packet_gate.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/fifo64_to_axi4lite.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/shortfifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axis_fifo_monitor.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axis_strm_monitor.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/sim/fifo/axi_fifo_2clk_sim.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_chdr_header_trigger.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_chdr_test_pattern.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_defs.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_dma_fifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_dma_master.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_embed_tlast.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_extract_tlast.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_fast_extract_tlast.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_embed_tlast_tkeep.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_extract_tlast_tkeep.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_fast_fifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_to_strobed.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_data_swap.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_dummy.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/strobed_to_axi.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_add_preamble.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axi_strip_preamble.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/crc_xnor.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_shift_register.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_upsizer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_downsizer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_width_conv.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_split.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_packetize.v
+BUILDER: Adding SVerilog: /home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_pkt_throttle.sv
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/ad5662_auto_spi.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/arb_qualify_master.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axi_crossbar.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axi_crossbar_regport.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axi_fifo_header.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axi_forwarding_cam.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axi_setting_reg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axi_slave_mux.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axi_test_vfifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/bin2gray.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/binary_encoder.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/clock_div.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/db_control.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/fe_control.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/filter_bad_sid.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/gearbox_2x1.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/gpio_atr_io.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/gpio_atr.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/gray2bin.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/por_gen.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/priority_encoder_one_hot.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/priority_encoder.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/ram_2port_impl.vh
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/ram_2port.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/reset_sync.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/s7_icap_wb.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/serial_to_settings.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/setting_reg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/settings_bus_mux.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/settings_bus_timed_2clk.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/simple_i2c_core.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/simple_spi_core.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/simple_spi_core_64bit.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer_impl.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_synchronizer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/user_settings.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axil_regport_master.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axil_to_ni_regport.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/regport_resp_mux.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/regport_to_xbar_settingsbus.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/regport_to_settingsbus.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_stretch.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_stretch_min.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/mdio_master.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/map/cam_priority_encoder.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/map/cam_bram.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/map/cam_srl.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/map/cam.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/map/kv_map.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/map/axis_muxed_kv_map.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/axil_ctrlport_master.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/handshake.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/ctrlport_to_regport.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/control/glitch_free_mux.v
+BUILDER: Adding SVerilog: /home/user/rfdev/uhd/fpga/usrp3/lib/control/regport_if.sv
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/timing/time_compare.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/timing/timekeeper_legacy.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/timing/pps_generator.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/timing/pps_synchronizer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/timing/pulse_generator.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/packet_proc/chdr_chunker.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/packet_proc/chdr_dechunker.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/packet_proc/cvita_dest_lookup.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/packet_proc/ip_hdr_checksum.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/packet_proc/arm_deframer.v
+BUILDER: Adding VHDL    : /home/user/rfdev/uhd/fpga/usrp3/lib/packet_proc/arp_responder/arp_responder.vhd
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/acc.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/add2_and_clip_reg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/add2_and_clip.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/add2_and_round_reg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/add2_and_round.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/add2_reg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/add2.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/add_then_mac.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/cic_decim.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/cic_dec_shifter.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/cic_interp.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/cic_int_shifter.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/cic_strober.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/clip_reg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/clip.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/cordic_stage.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/cordic_z24.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/ddc_chain.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/duc_chain.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/hb47_int.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/hb_dec.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/hb_interp.v
+BUILDER: [WARNING] File ignored!!!: /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/Makefile.srcs
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/mult_add_clip.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/round_reg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/round_sd.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/round.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/rx_dcoffset.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/rx_frontend.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/sign_extend.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/small_hb_dec.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/small_hb_int.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/srl.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/tx_frontend.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/dsp/variable_delay_line.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/chdr_fifo_large.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_bit_reduce.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/null_source.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/split_stream.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/split_stream_fifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/conj.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/delay_fifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/delay_type2.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/delay_type3.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/delay_type4.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/complex_to_magsq.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/phase_accum.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/complex_invert.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/periodic_framer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/moving_sum.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/counter.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/ram_to_fifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/const.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/const_sreg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cmul.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cadd.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/keep_one_in_n.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/vector_iir.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/addsub.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_pipe.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/multiply.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/mult.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/mult_add.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/mult_rc.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/mult_add_rc.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fft_shift.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_pipe_join.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_pipe_mac.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_round_and_clip_complex.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_round_complex.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_clip_complex.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_join.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_sync.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/split_complex.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_round_and_clip.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/join_complex.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_round.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_clip.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_clip_unsigned.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_serializer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_deserializer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_packer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/complex_to_mag_approx.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/file_source.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/delay.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/fifo_srl.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/rng.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_avg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_binmap.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_core.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_eoseq.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_histo_mem.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_line_mem.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_logpwr.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_maxhold.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_packetizer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_rise_decay.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/f15_wf_agg.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fosphor/axi_logpwr.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_parser.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_encoder.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_decoder.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cvita_hdr_modify.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_async_stream.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_rate_change.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_tag_time.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_drop_partial_packet.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/ddc.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/duc.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cic_decimate.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/cic_interpolate.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/sine_tone.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_fir_filter.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/fir_filter_slice.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/axi_fir_filter_dec.v
+BUILDER: Adding VHDL    : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/addsub.vhd
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/dds_freq_tune.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/dds_freq_tune_duc.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/dds_timed.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/dds_wrapper.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/datapath_gatekeeper.v
+BUILDER: Adding SVerilog: /home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv
+BUILDER: Adding SVerilog: /home/user/rfdev/matlab-rfnoc/MatLabDatHandler.svh
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_endpoint.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_master.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_slave.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_compute_tkeep.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_chdr_data.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_pyld_ctxt.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_data.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_pyld_ctxt_to_chdr.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_ingress_fifo.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_mgmt_pkt_handler.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_data_swapper.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_stream_endpoint.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_stream_input.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_stream_output.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_ctrl.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/backend_iface.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/rfnoc_core_kernel.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_trim_payload.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_pad_packet.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_resize.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_convert_up.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_convert_down.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/context_handler_sync.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/context_builder.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/context_parser.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_timer.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_combiner.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_decoder.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_decoder_param.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_window.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_splitter.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_resp_combine.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_clk_cross.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_reg_rw.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_reg_ro.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_to_settings_bus.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/noc_shell_generic_ctrlport_pyld_chdr.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/timekeeper.v
+BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_terminator.v
+BUILDER: Adding SVerilog: /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_strip_header.sv
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/rfnoc_block_nlms.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/noc_shell_nlms.v
+# foreach sim_src $sim_srcs {
+#     puts "BUILDER: Adding Sim Src : $sim_src"
+#     add_files -fileset $sim_fileset -norecurse $sim_src
+# }
+BUILDER: Adding Sim Src : /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/rfnoc_block_nlms_tb.sv
+# foreach inc_src $inc_srcs {
+#     puts "BUILDER: Adding Inc Src : $inc_src"
+#     add_files -fileset $sim_fileset -norecurse $inc_src
+# }
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/general/sim_clks_rsts.vh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/general/sim_exec_report.vh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/general/sim_math.vh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/general/sim_file_io.svh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/axi/sim_axi4_lib.svh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/axi/sim_axis_lib.svh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/axi/sim_cvita_lib.svh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/control/sim_set_rb_lib.svh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/lib/axi4lite_sv/PkgAxiLite.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/lib/axi4lite_sv/AxiLiteIf.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/test_exec.svh
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/sim_clock_gen.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxiLiteBfm.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgEthernet.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxisCtrlBfm.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocItemUtils.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgCtrlIfaceBfm.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrIfaceBfm.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/packages/PkgMath.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/packages/PkgComplex.sv
+BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/packages/PkgRandom.sv
+# set_property top $sim_top [get_filesets $sim_fileset]
+# set_property default_lib xil_defaultlib [current_project]
+# update_compile_order -fileset sim_1 -quiet
+# set_property target_simulator $simulator [current_project]
+# if [expr [string equal $simulator "XSim"] == 1] {
+#     append verilog_defs " WORKING_DIR=\"$working_dir\""
+# } else {
+#     append verilog_defs " WORKING_DIR=$working_dir"
+# }
+# set_property verilog_define $verilog_defs [get_filesets $sim_fileset]
+# set_property xsim.simulate.runtime "${sim_runtime}us" -objects [get_filesets $sim_fileset]
+# set_property xsim.elaborate.debug_level "all" -objects [get_filesets $sim_fileset]
+# set_property xsim.elaborate.unifast $sim_fast -objects [get_filesets $sim_fileset]
+# set_property xsim.elaborate.xelab.more_options -value {-timescale 1ns/1ns} -objects [get_filesets $sim_fileset]
+# if [expr [string equal $simulator "Modelsim"] == 1] {
+#     set sim_64bit       $::env(VIV_SIM_64BIT)
+# 
+#     set_property compxlib.modelsim_compiled_library_dir $sim_complibdir [current_project]
+#     # Does not work yet (as of Vivado 2015.2), but will be useful for 32-bit support
+#     # See: http://www.xilinx.com/support/answers/62210.html
+#     set_property modelsim.64bit $sim_64bit -objects [get_filesets $sim_fileset]
+#     set_property modelsim.simulate.runtime "${sim_runtime}ns" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.elaborate.acc "true" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.simulate.log_all_signals "true" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.simulate.vsim.more_options -value "-c" -objects [get_filesets $sim_fileset]
+#     set_property modelsim.elaborate.unifast $sim_fast -objects [get_filesets $sim_fileset]
+#     if [info exists ::env(VIV_SIM_USER_DO) ] {
+#         set_property modelsim.simulate.custom_udo -value "$::env(VIV_SIM_USER_DO)" -objects [get_filesets $sim_fileset]
+#     }
+# }
+# launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-12493] Simulation top is 'rfnoc_block_nlms_tb'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
+INFO: [SIM-utils-54] Inspecting design source files for 'rfnoc_block_nlms_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj rfnoc_block_nlms_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/rfnoc_block_nlms.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rfnoc_block_nlms
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxisCtrlBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv" into library xil_defaultlib
+WARNING: [VRFC 10-674] expression with variable or undeterminable width as argument to $bits [/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv:342]
+WARNING: [VRFC 10-674] expression with variable or undeterminable width as argument to $bits [/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv:379]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrIfaceBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgCtrlIfaceBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocItemUtils.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/sim_clock_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_clock_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/rfnoc_block_nlms_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rfnoc_block_nlms_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+xelab -wto 481681aa164142a98ba56f87d3d25d01 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_nlms_tb_behav xil_defaultlib.rfnoc_block_nlms_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
+Vivado Simulator v2021.1
+Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 481681aa164142a98ba56f87d3d25d01 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_nlms_tb_behav xil_defaultlib.rfnoc_block_nlms_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+ERROR: [VRFC 10-2063] Module <noc_shell_nlms> not found while processing module instance <noc_shell_nlms_i> [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/rfnoc_block_nlms.v:112]
+ERROR: [XSIM 43-3322] Static elaboration of top level Verilog design unit(s) in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 2429.609 ; gain = 0.000 ; free physical = 8641 ; free virtual = 14429
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+    while executing
+"launch_simulation"
+    (file "/home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl" line 144)
+INFO: [Common 17-206] Exiting Vivado at Wed Nov  6 12:29:02 2024...

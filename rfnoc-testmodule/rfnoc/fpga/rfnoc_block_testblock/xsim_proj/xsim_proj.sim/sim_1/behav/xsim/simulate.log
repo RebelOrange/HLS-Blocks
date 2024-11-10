@@ -7,15 +7,15 @@ TESTBENCH STARTED: rfnoc_block_testblock_tb
 [TEST CASE   2] (t =      6400 ns) BEGIN: Verify Block Info...
 [TEST CASE   2] (t =      6400 ns) DONE... Passed
 [TEST CASE   3] (t =      6400 ns) BEGIN: Verify user register...
-[TEST CASE   3] (t =      7725 ns) DONE... Passed
-[TEST CASE   4] (t =      7725 ns) BEGIN: Test passing through samples...
-[TEST CASE   4] (t =      8270 ns) DONE... Passed
+[TEST CASE   3] (t =      7900 ns) DONE... Passed
+[TEST CASE   4] (t =      7900 ns) BEGIN: Test passing through samples...
+[TEST CASE   4] (t =      8475 ns) DONE... Passed
 ========================================================
 TESTBENCH FINISHED: rfnoc_block_testblock_tb
- - Time elapsed:  8270 ns
+ - Time elapsed:  8475 ns
  - Tests Run:     4
  - Tests Passed:  4
  - Tests Failed:  0
 Result: PASSED   
 ========================================================
-$finish called at time : 8270 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
+$finish called at time : 8475 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102

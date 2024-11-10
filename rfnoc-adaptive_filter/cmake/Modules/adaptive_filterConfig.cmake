@@ -1,0 +1,30 @@
+INCLUDE(FindPkgConfig)
+PKG_CHECK_MODULES(PC_ADAPTIVE_FILTER adaptive_filter)
+
+FIND_PATH(
+    ADAPTIVE_FILTER_INCLUDE_DIRS
+    NAMES adaptive_filter/api.h
+    HINTS $ENV{ADAPTIVE_FILTER_DIR}/include
+        ${PC_ADAPTIVE_FILTER_INCLUDEDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/include
+          /usr/local/include
+          /usr/include
+)
+
+FIND_LIBRARY(
+    ADAPTIVE_FILTER_LIBRARIES
+    NAMES gnuradio-adaptive_filter
+    HINTS $ENV{ADAPTIVE_FILTER_DIR}/lib
+        ${PC_ADAPTIVE_FILTER_LIBDIR}
+    PATHS ${CMAKE_INSTALL_PREFIX}/lib
+          ${CMAKE_INSTALL_PREFIX}/lib64
+          /usr/local/lib
+          /usr/local/lib64
+          /usr/lib
+          /usr/lib64
+)
+
+INCLUDE(FindPackageHandleStandardArgs)
+FIND_PACKAGE_HANDLE_STANDARD_ARGS(ADAPTIVE_FILTER DEFAULT_MSG ADAPTIVE_FILTER_LIBRARIES ADAPTIVE_FILTER_INCLUDE_DIRS)
+MARK_AS_ADVANCED(ADAPTIVE_FILTER_LIBRARIES ADAPTIVE_FILTER_INCLUDE_DIRS)
+

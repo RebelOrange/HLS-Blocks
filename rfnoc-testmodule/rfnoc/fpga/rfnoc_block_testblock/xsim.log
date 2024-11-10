@@ -2,13 +2,14 @@
 # Vivado v2021.1_AR76780 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Mon Jun 10 19:14:48 2024
-# Process ID: 8425
-# Current directory: /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock
-# Command line: vivado -mode batch -source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl -log xsim.log -nojournal
-# Log file: /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim.log
+# Start of session at: Mon Oct 28 11:49:55 2024
+# Process ID: 2226
+# Current directory: /home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock
+# Command line: vivado -mode gui -source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl -log xsim.log -nojournal
+# Log file: /home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim.log
 # Journal file: 
 #-----------------------------------------------------------
+start_gui
 source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl
 # set simulator       $::env(VIV_SIMULATOR)
 # set design_srcs     $::env(VIV_DESIGN_SRCS)
@@ -38,8 +39,16 @@ source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl
 #     exit 1
 # }
 # puts "BUILDER: Creating Vivado simulation project part $part_name"
-BUILDER: Creating Vivado simulation project part xc7z020clg484-3
+BUILDER: Creating Vivado simulation project part xc7k410tffg900-2
+# puts "BUILDER: Overriding part name to Zynq 7000 SoC: xc7z020-clg484-3"
+BUILDER: Overriding part name to Zynq 7000 SoC: xc7z020-clg484-3
+# set part_name xc7z020clg484-3
 # create_project -part $part_name -force $project_name/$project_name
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/patches/AR76780/vivado/data/ip'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2021.1/data/ip'.
+create_project: Time (s): cpu = 00:00:27 ; elapsed = 00:00:11 . Memory (MB): peak = 7421.211 ; gain = 62.613 ; free physical = 12250 ; free virtual = 16388
 # foreach src_file $design_srcs {
 #     if [expr [file isdirectory $src_file] == 1] {
 #         puts "BUILDER: Expanding Directory : $src_file"
@@ -363,13 +372,13 @@ BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/noc_sh
 BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/timekeeper.v
 BUILDER: Adding Verilog : /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/ctrlport_terminator.v
 BUILDER: Adding SVerilog: /home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/utils/chdr_strip_header.sv
-BUILDER: Adding Verilog : /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock.v
-BUILDER: Adding Verilog : /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/noc_shell_testblock.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/noc_shell_testblock.v
 # foreach sim_src $sim_srcs {
 #     puts "BUILDER: Adding Sim Src : $sim_src"
 #     add_files -fileset $sim_fileset -norecurse $sim_src
 # }
-BUILDER: Adding Sim Src : /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock_tb.sv
+BUILDER: Adding Sim Src : /home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock_tb.sv
 # foreach inc_src $inc_srcs {
 #     puts "BUILDER: Adding Inc Src : $inc_src"
 #     add_files -fileset $sim_fileset -norecurse $inc_src
@@ -435,14 +444,14 @@ BUILDER: Adding Inc Src : /home/user/rfdev/uhd/fpga/usrp3/sim/packages/PkgRandom
 # launch_simulation
 Command: launch_simulation 
 INFO: [Vivado 12-12493] Simulation top is 'rfnoc_block_testblock_tb'
-INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
 INFO: [SIM-utils-51] Simulation object is 'sim_1'
 INFO: [SIM-utils-72] Using boost library from '/opt/Xilinx/Vivado/2021.1/tps/boost_1_72_0'
 INFO: [SIM-utils-54] Inspecting design source files for 'rfnoc_block_testblock_tb' in fileset 'sim_1'...
 INFO: [USF-XSim-97] Finding global include files...
 INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
 INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
 xvlog --incr --relax -L uvm -prj rfnoc_block_testblock_tb_vlog.prj
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_demux.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module axi_demux
@@ -488,7 +497,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib
 INFO: [VRFC 10-311] analyzing module ctrlport_endpoint
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/gray2bin.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module gray2bin
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/noc_shell_testblock.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/noc_shell_testblock.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module noc_shell_testblock
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_stretch_min.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module pulse_stretch_min
@@ -501,13 +510,15 @@ INFO: [VRFC 10-311] analyzing module ram_2port_impl_lutram
 INFO: [VRFC 10-311] analyzing module ram_2port_impl_bram
 INFO: [VRFC 10-311] analyzing module ram_2port_impl_uram
 INFO: [VRFC 10-311] analyzing module ram_2port
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rfnoc_block_testblock
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module synchronizer
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer_impl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module synchronizer_impl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3824] variable 'ret' must explicitly be declared as automatic or static [/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv:52]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv" into library xil_defaultlib
@@ -522,19 +533,19 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usr
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/sim_clock_gen.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module sim_clock_gen
-INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/rfnoc_block_testblock_tb.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rfnoc_block_testblock_tb
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 Waiting for jobs to finish...
 No pending jobs, compilation finished.
 INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
-xelab -wto 45fd8496978f4a7183f9f66c063b750a --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev/uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_testblock_tb_behav xil_defaultlib.rfnoc_block_testblock_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+xelab -wto b5eb937a5a6f4130a756d5d97370201d --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_testblock_tb_behav xil_defaultlib.rfnoc_block_testblock_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 45fd8496978f4a7183f9f66c063b750a --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev/uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_testblock_tb_behav xil_defaultlib.rfnoc_block_testblock_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
+Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto b5eb937a5a6f4130a756d5d97370201d --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_testblock_tb_behav xil_defaultlib.rfnoc_block_testblock_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -555,6 +566,7 @@ Compiling package std.std
 Compiling package xil_defaultlib.PkgCtrlIfaceBfm
 Compiling package xil_defaultlib.PkgAxisCtrlBfm
 Compiling package xil_defaultlib.PkgChdrIfaceBfm
+Compiling package xil_defaultlib.MatLabDatHandler
 Compiling package xil_defaultlib.PkgTestExec
 Compiling package xil_defaultlib.PkgRfnocItemUtils
 Compiling package xil_defaultlib.$unit_AxiStreamIf_sv
@@ -632,12 +644,12 @@ Built simulation snapshot rfnoc_block_testblock_tb_behav
   **** IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
-source /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/xsim.dir/rfnoc_block_testblock_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Mon Jun 10 19:15:38 2024...
-run_program: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 2433.871 ; gain = 0.000 ; free physical = 10470 ; free virtual = 16371
-INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+source /home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/xsim.dir/rfnoc_block_testblock_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Mon Oct 28 11:51:33 2024...
+run_program: Time (s): cpu = 00:00:21 ; elapsed = 00:00:15 . Memory (MB): peak = 7421.547 ; gain = 0.000 ; free physical = 12190 ; free virtual = 16461
+INFO: [USF-XSim-69] 'elaborate' step finished in '16' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
    with args "rfnoc_block_testblock_tb_behav -key {Behavioral:sim_1:Functional:rfnoc_block_testblock_tb} -tclbatch {rfnoc_block_testblock_tb.tcl} -log {simulate.log}"
 INFO: [USF-XSim-8] Loading simulator feature
@@ -654,21 +666,22 @@ TESTBENCH STARTED: rfnoc_block_testblock_tb
 [TEST CASE   2] (t =      6400 ns) BEGIN: Verify Block Info...
 [TEST CASE   2] (t =      6400 ns) DONE... Passed
 [TEST CASE   3] (t =      6400 ns) BEGIN: Verify user register...
-[TEST CASE   3] (t =      7725 ns) DONE... Passed
-[TEST CASE   4] (t =      7725 ns) BEGIN: Test passing through samples...
-[TEST CASE   4] (t =      8270 ns) DONE... Passed
+[TEST CASE   3] (t =      7900 ns) DONE... Passed
+[TEST CASE   4] (t =      7900 ns) BEGIN: Test passing through samples...
+[TEST CASE   4] (t =      8475 ns) DONE... Passed
 ========================================================
 TESTBENCH FINISHED: rfnoc_block_testblock_tb
- - Time elapsed:  8270 ns
+ - Time elapsed:  8475 ns
  - Tests Run:     4
  - Tests Passed:  4
  - Tests Failed:  0
 Result: PASSED   
 ========================================================
-$finish called at time : 8270 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
+$finish called at time : 8475 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
+xsim: Time (s): cpu = 00:00:16 ; elapsed = 00:00:08 . Memory (MB): peak = 7496.043 ; gain = 63.836 ; free physical = 12107 ; free virtual = 16392
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'rfnoc_block_testblock_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000000000us
-launch_simulation: Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 2498.371 ; gain = 64.500 ; free physical = 10478 ; free virtual = 16380
+launch_simulation: Time (s): cpu = 00:00:54 ; elapsed = 00:00:39 . Memory (MB): peak = 7496.043 ; gain = 74.496 ; free physical = 12107 ; free virtual = 16392
 # if { [info exists ::env(VIV_SYNTH_TOP)] } {
 #    puts "BUILDER: Synthesizing"
 #    # Synthesize requested modules
@@ -695,5 +708,12 @@ BUILDER: Synthesizing
 # } else {
 #     puts "BUILDER: In GUI mode. Leaving project open."
 # }
-BUILDER: Closing project
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 10 19:15:43 2024...
+BUILDER: In GUI mode. Leaving project open.
+update_compile_order -fileset sources_1
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 7634.414 ; gain = 2.000 ; free physical = 9961 ; free virtual = 14753
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Oct 28 12:03:07 2024...

@@ -1,0 +1,130 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_demux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_demux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/sim/fifo/axi_fifo_2clk_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_2clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_flop2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_flop2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_fifo_short.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_short
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/fifo/axi_packet_gate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_packet_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_ctrl_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_ctrl_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_ctrl_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/axis_data_to_chdr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_data_to_chdr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_downsizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_downsizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_packet_flush.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_packet_flush
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_upsizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_upsizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi/axis_width_conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_width_conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/backend_iface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module backend_iface
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/bin2gray.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bin2gray
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_compute_tkeep.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chdr_compute_tkeep
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_data.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chdr_to_axis_data
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_endpoint
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/gray2bin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gray2bin
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_add_113s_113s_113_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_add_113s_113s_113_2_1_Adder_0
+INFO: [VRFC 10-311] analyzing module lms_module_add_113s_113s_113_2_1_Adder_0_comb_adder
+INFO: [VRFC 10-311] analyzing module lms_module_add_113s_113s_113_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_64s_16s_79_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_mul_64s_16s_79_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_64s_16s_80_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_mul_64s_16s_80_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_80s_32ns_112_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_mul_80s_32ns_112_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_81s_32ns_112_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_mul_81s_32ns_112_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_regslice_both
+INFO: [VRFC 10-311] analyzing module lms_module_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_add_175s_175ns_175_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_add_175s_175ns_175_2_1_Adder_0
+INFO: [VRFC 10-311] analyzing module nlms_module_add_175s_175ns_175_2_1_Adder_0_comb_adder
+INFO: [VRFC 10-311] analyzing module nlms_module_add_175s_175ns_175_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mac_muladd_16s_16s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_mac_muladd_16s_16s_32s_32_4_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module nlms_module_mac_muladd_16s_16s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_63ns_32ns_95_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_mul_63ns_32ns_95_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_64s_16s_79_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_mul_64s_16s_79_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_64s_16s_80_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_mul_64s_16s_80_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_95ns_80s_175_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_mul_95ns_80s_175_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_95ns_81s_175_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_mul_95ns_81s_175_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_mul_16s_16s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_mul_mul_16s_16s_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module nlms_module_mul_mul_16s_16s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_regslice_both
+INFO: [VRFC 10-311] analyzing module nlms_module_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_udiv_65s_64ns_64_69_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_udiv_65s_64ns_64_69_1_divider
+INFO: [VRFC 10-311] analyzing module nlms_module_udiv_65s_64ns_64_69_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/noc_shell_adaptive_filter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noc_shell_adaptive_filter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_stretch_min.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_stretch_min
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_synchronizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_synchronizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/ram_2port.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_auto
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_reg
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_lutram
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_bram
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_uram
+INFO: [VRFC 10-311] analyzing module ram_2port
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rfnoc_block_adaptive_filter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synchronizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/synchronizer_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synchronizer_impl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv" into library xil_defaultlib
+WARNING: [VRFC 10-3824] variable 'ret' must explicitly be declared as automatic or static [/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv:54]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxisCtrlBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv" into library xil_defaultlib
+WARNING: [VRFC 10-674] expression with variable or undeterminable width as argument to $bits [/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv:342]
+WARNING: [VRFC 10-674] expression with variable or undeterminable width as argument to $bits [/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv:379]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrIfaceBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgCtrlIfaceBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgRfnocItemUtils.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/matlab-rfnoc/rfnoc.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/sim_clock_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_clock_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rfnoc_block_adaptive_filter_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl

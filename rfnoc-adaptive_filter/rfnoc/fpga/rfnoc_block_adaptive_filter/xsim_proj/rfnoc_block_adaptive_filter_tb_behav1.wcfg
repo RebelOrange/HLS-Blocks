@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="rfnoc_block_adaptive_filter_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="MatLabDatHandler" />
+            <top_module name="PkgAxiStreamBfm" />
+            <top_module name="PkgAxisCtrlBfm" />
+            <top_module name="PkgChdrBfm" />
+            <top_module name="PkgChdrData" />
+            <top_module name="PkgChdrIfaceBfm" />
+            <top_module name="PkgChdrUtils" />
+            <top_module name="PkgCtrlIfaceBfm" />
+            <top_module name="PkgRfnocBlockCtrlBfm" />
+            <top_module name="PkgRfnocItemUtils" />
+            <top_module name="PkgTestExec" />
+            <top_module name="\$unit_AxiStreamIf_sv " />
+            <top_module name="glbl" />
+            <top_module name="rfnoc_block_adaptive_filter_tb" />
+            <top_module name="rfnoc_helpers" />
+            <top_module name="std" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="102,494,995 ps"></ZoomStartTime>
+      <ZoomEndTime time="102,495,001 ps"></ZoomEndTime>
+      <Cursor1Time time="102,495,000 ps"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="276"></NameColumnWidth>
+      <ValueColumnWidth column_width="120"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="26" />
+   <wvobject type="logic" fp_name="/rfnoc_block_adaptive_filter_tb/rfnoc_chdr_clk">
+      <obj_property name="ElementShortName">rfnoc_chdr_clk</obj_property>
+      <obj_property name="ObjectShortName">rfnoc_chdr_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rfnoc_block_adaptive_filter_tb/rfnoc_ctrl_clk">
+      <obj_property name="ElementShortName">rfnoc_ctrl_clk</obj_property>
+      <obj_property name="ObjectShortName">rfnoc_ctrl_clk</obj_property>
+   </wvobject>
+   <wvobject type="logic" fp_name="/rfnoc_block_adaptive_filter_tb/ce_clk">
+      <obj_property name="ElementShortName">ce_clk</obj_property>
+      <obj_property name="ObjectShortName">ce_clk</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/s_rfnoc_chdr_tdata">
+      <obj_property name="ElementShortName">s_rfnoc_chdr_tdata[127:0]</obj_property>
+      <obj_property name="ObjectShortName">s_rfnoc_chdr_tdata[127:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/s_rfnoc_chdr_tlast">
+      <obj_property name="ElementShortName">s_rfnoc_chdr_tlast[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_rfnoc_chdr_tlast[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/s_rfnoc_chdr_tvalid">
+      <obj_property name="ElementShortName">s_rfnoc_chdr_tvalid[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_rfnoc_chdr_tvalid[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/s_rfnoc_chdr_tready">
+      <obj_property name="ElementShortName">s_rfnoc_chdr_tready[1:0]</obj_property>
+      <obj_property name="ObjectShortName">s_rfnoc_chdr_tready[1:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/m_rfnoc_chdr_tdata">
+      <obj_property name="ElementShortName">m_rfnoc_chdr_tdata[63:0]</obj_property>
+      <obj_property name="ObjectShortName">m_rfnoc_chdr_tdata[63:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/m_rfnoc_chdr_tlast">
+      <obj_property name="ElementShortName">m_rfnoc_chdr_tlast[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m_rfnoc_chdr_tlast[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/m_rfnoc_chdr_tvalid">
+      <obj_property name="ElementShortName">m_rfnoc_chdr_tvalid[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m_rfnoc_chdr_tvalid[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/m_rfnoc_chdr_tready">
+      <obj_property name="ElementShortName">m_rfnoc_chdr_tready[0:0]</obj_property>
+      <obj_property name="ObjectShortName">m_rfnoc_chdr_tready[0:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/NOC_ID">
+      <obj_property name="ElementShortName">NOC_ID[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NOC_ID[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/THIS_PORTID">
+      <obj_property name="ElementShortName">THIS_PORTID[9:0]</obj_property>
+      <obj_property name="ObjectShortName">THIS_PORTID[9:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/CHDR_W">
+      <obj_property name="ElementShortName">CHDR_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">CHDR_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/MTU">
+      <obj_property name="ElementShortName">MTU[31:0]</obj_property>
+      <obj_property name="ObjectShortName">MTU[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/NUM_PORTS">
+      <obj_property name="ElementShortName">NUM_PORTS[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_PORTS[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/NUM_PORTS_I">
+      <obj_property name="ElementShortName">NUM_PORTS_I[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_PORTS_I[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/NUM_PORTS_O">
+      <obj_property name="ElementShortName">NUM_PORTS_O[31:0]</obj_property>
+      <obj_property name="ObjectShortName">NUM_PORTS_O[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/ITEM_W">
+      <obj_property name="ElementShortName">ITEM_W[31:0]</obj_property>
+      <obj_property name="ObjectShortName">ITEM_W[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/SPP">
+      <obj_property name="ElementShortName">SPP[31:0]</obj_property>
+      <obj_property name="ObjectShortName">SPP[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/PKT_SIZE_BYTES">
+      <obj_property name="ElementShortName">PKT_SIZE_BYTES[31:0]</obj_property>
+      <obj_property name="ObjectShortName">PKT_SIZE_BYTES[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/STALL_PROB">
+      <obj_property name="ElementShortName">STALL_PROB[31:0]</obj_property>
+      <obj_property name="ObjectShortName">STALL_PROB[31:0]</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/rfnoc_block_adaptive_filter_tb/CHDR_CLK_PER">
+      <obj_property name="ElementShortName">CHDR_CLK_PER</obj_property>
+      <obj_property name="ObjectShortName">CHDR_CLK_PER</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/rfnoc_block_adaptive_filter_tb/CTRL_CLK_PER">
+      <obj_property name="ElementShortName">CTRL_CLK_PER</obj_property>
+      <obj_property name="ObjectShortName">CTRL_CLK_PER</obj_property>
+   </wvobject>
+   <wvobject type="other" fp_name="/rfnoc_block_adaptive_filter_tb/CE_CLK_PER">
+      <obj_property name="ElementShortName">CE_CLK_PER</obj_property>
+      <obj_property name="ObjectShortName">CE_CLK_PER</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="/rfnoc_block_adaptive_filter_tb/dut/noc_shell_adaptive_filter_i/s_out_axis_tdata">
+      <obj_property name="ElementShortName">s_out_axis_tdata[31:0]</obj_property>
+      <obj_property name="ObjectShortName">s_out_axis_tdata[31:0]</obj_property>
+   </wvobject>
+</wave_config>

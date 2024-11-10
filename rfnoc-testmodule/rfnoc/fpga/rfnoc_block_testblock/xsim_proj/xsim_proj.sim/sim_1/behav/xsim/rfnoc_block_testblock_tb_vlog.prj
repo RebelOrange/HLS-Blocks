@@ -1,5 +1,5 @@
 # compile verilog/system verilog design source files
-verilog xil_defaultlib  --include "../../../../../../../../../../uhd/fpga/usrp3/lib/control" --include "../../../../../../../../../../matlab-rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/general" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/axi" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/control" -d "UHD_FPGA_DIR=/home/user/rfdev/uhd/fpga/usrp3/top/../.." -d "WORKING_DIR="/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock"" \
+verilog xil_defaultlib  --include "../../../../../../../../../../uhd/fpga/usrp3/lib/control" --include "../../../../../../../../../../matlab-rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/general" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/axi" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/control" -d "UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.." -d "WORKING_DIR="/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock"" \
 "../../../../../../../../../../uhd/fpga/usrp3/lib/fifo/axi_demux.v" \
 "../../../../../../../../../../uhd/fpga/usrp3/lib/fifo/axi_fifo.v" \
 "../../../../../../../../../../uhd/fpga/usrp3/lib/sim/fifo/axi_fifo_2clk_sim.v" \
@@ -30,8 +30,9 @@ verilog xil_defaultlib  --include "../../../../../../../../../../uhd/fpga/usrp3/
 "../../../../../../../../../../uhd/fpga/usrp3/lib/control/synchronizer.v" \
 "../../../../../../../../../../uhd/fpga/usrp3/lib/control/synchronizer_impl.v" \
 
-sv xil_defaultlib  --include "../../../../../../../../../../uhd/fpga/usrp3/lib/control" --include "../../../../../../../../../../matlab-rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/general" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/axi" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/control" -d "UHD_FPGA_DIR=/home/user/rfdev/uhd/fpga/usrp3/top/../.." -d "WORKING_DIR="/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock"" \
+sv xil_defaultlib  --include "../../../../../../../../../../uhd/fpga/usrp3/lib/control" --include "../../../../../../../../../../matlab-rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/rfnoc" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/general" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/axi" --include "../../../../../../../../../../uhd/fpga/usrp3/sim/control" -d "UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.." -d "WORKING_DIR="/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock"" \
 "../../../../../../../../../../uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv" \
+"../../../../../../../../../../matlab-rfnoc/MatLabDatHandler.sv" \
 "../../../../../../../../../../uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv" \
 "../../../../../../../../../../uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv" \
 "../../../../../../../../../../uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv" \

@@ -1,6 +1,6 @@
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 45fd8496978f4a7183f9f66c063b750a --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev/uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_testblock_tb_behav xil_defaultlib.rfnoc_block_testblock_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
+Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto b5eb937a5a6f4130a756d5d97370201d --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_testblock_tb_behav xil_defaultlib.rfnoc_block_testblock_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -21,6 +21,7 @@ Compiling package std.std
 Compiling package xil_defaultlib.PkgCtrlIfaceBfm
 Compiling package xil_defaultlib.PkgAxisCtrlBfm
 Compiling package xil_defaultlib.PkgChdrIfaceBfm
+Compiling package xil_defaultlib.MatLabDatHandler
 Compiling package xil_defaultlib.PkgTestExec
 Compiling package xil_defaultlib.PkgRfnocItemUtils
 Compiling package xil_defaultlib.$unit_AxiStreamIf_sv

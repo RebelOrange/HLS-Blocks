@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2021.1_AR76780 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Nov  6 12:49:57 2024
+# Process ID: 5774
+# Current directory: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/xsim.dir/rfnoc_block_nlms_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_nlms/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/xsim.dir/rfnoc_block_nlms_tb_behav/webtalk/xsim_webtalk.tcl -notrace

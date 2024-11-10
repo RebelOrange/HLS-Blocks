@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2021.1_AR76780 (64-bit)
+# SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
+# IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
+# Start of session at: Wed Sep 18 17:18:01 2024
+# Process ID: 4916
+# Current directory: /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock
+# Command line: vivado
+# Log file: /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/vivado.log
+# Journal file: /home/user/rfdev/hls-blocks/rfnoc-testmodule/rfnoc/fpga/rfnoc_block_testblock/vivado.jou
+#-----------------------------------------------------------
+start_gui
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Sep 18 17:35:53 2024...

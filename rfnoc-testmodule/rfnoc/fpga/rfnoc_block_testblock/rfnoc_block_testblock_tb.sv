@@ -30,6 +30,7 @@ module rfnoc_block_testblock_tb;
 
   `include "test_exec.svh"
 
+  import MatLabDatHandler::*;
   import PkgTestExec::*;
   import PkgChdrUtils::*;
   import PkgRfnocBlockCtrlBfm::*;

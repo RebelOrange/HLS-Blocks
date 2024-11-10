@@ -1,0 +1,7 @@
+Running: xsim.dir/rfnoc_block_adaptive_filter_tb_behav/xsimk -simmode gui -wdb rfnoc_block_adaptive_filter_tb_behav.wdb -simrunnum 0 -socket 41121
+Design successfully loaded
+Design Loading Memory Usage: 38836 KB (Peak: 38836 KB)
+Design Loading CPU Usage: 20 ms
+Simulation completed
+Simulation Memory Usage: 134716 KB (Peak: 178104 KB)
+Simulation CPU Usage: 5600 ms

@@ -1,0 +1,4 @@
+'[adaptive_filter]':
+- adaptive_filter_nlms
+- adaptive_filter_lms
+- adaptive_filter_adaptive_filter

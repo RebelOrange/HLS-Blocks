@@ -1,0 +1,22 @@
+Time resolution is 1 ps
+========================================================
+TESTBENCH STARTED: rfnoc_block_adaptive_filter_tb
+========================================================
+[TEST CASE   1] (t =         0 ns) BEGIN: Flush block then reset it...
+[TEST CASE   1] (t =      2495 ns) DONE... Passed
+[TEST CASE   2] (t =      2495 ns) BEGIN: Verify Block Info...
+[TEST CASE   2] (t =      2495 ns) DONE... Passed
+[TEST CASE   3] (t =      2495 ns) BEGIN: <Name your first test>...
+Opening file: /home/user/rfdev/mnt/data/input/noise_cancel/main_samples.dat
+Opening file: /home/user/rfdev/mnt/data/input/noise_cancel/aux_samples.dat
+Opening file: /home/user/rfdev/mnt/data/input/noise_cancel/sim_results.dat
+[TEST CASE   3] (t =     98885 ns) DONE... Passed
+========================================================
+TESTBENCH FINISHED: rfnoc_block_adaptive_filter_tb
+ - Time elapsed:  98885 ns
+ - Tests Run:     3
+ - Tests Passed:  3
+ - Tests Failed:  0
+Result: PASSED   
+========================================================
+$finish called at time : 98885 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
