@@ -40,6 +40,7 @@ module rfnoc_block_adaptive_filter_tb;
   localparam real   CHDR_CLK_PER    = 5.0;   // 200 MHz
   localparam real   CTRL_CLK_PER    = 8.0;   // 125 MHz
   localparam real   CE_CLK_PER      = 4.0;   // 250 MHz
+  
 
   //---------------------------------------------------------------------------
   // Clocks and Resets
@@ -125,7 +126,9 @@ module rfnoc_block_adaptive_filter_tb;
     .THIS_PORTID         (THIS_PORTID),
     .CHDR_W              (CHDR_W),
     .MTU                 (MTU),
-    .NUM_PORTS           (NUM_PORTS)
+    .NUM_PORTS           (NUM_PORTS),
+    .FILTER_ORDER        (filter_order),
+    .FILTER_TYPE         (filter_type)
   ) dut (
     .rfnoc_chdr_clk      (rfnoc_chdr_clk),
     .rfnoc_ctrl_clk      (rfnoc_ctrl_clk),
@@ -151,25 +154,107 @@ module rfnoc_block_adaptive_filter_tb;
   );
 
   //---------------------------------------------------------------------------
-  // Helper Functions
-  //---------------------------------------------------------------------------
     typedef struct {
         item_t  samples[$];
         chdr_word_t mdata[$];
         packet_info_t pkt_info;
     } test_packet_t;
 
+    WeightPair weightPair;
+    reg [63:0] weight_0[1:0];
+    reg [63:0] weight_1[1:0];
+    reg [63:0] weight_2[1:0];
+    string weightsFile_0;
+    string weightsFile_1;
+    string weightsFile_2;
+    int fdWeight_0;
+    int fdWeight_1;
+    int fdWeight_2;
+    string dataFolder;
+    string filOrder;
+
+    
+initial begin
+    dataFolder = folder;
+      $sformat(filOrder, "%0d", filter_order);
+
+    if(filter_type == 2) begin
+        weightsFile_0 = {dataFolder, {"weight_0_nlms_", filOrder, "tap.dat"}};
+        weightsFile_1 = {dataFolder, {"weight_1_nlms_", filOrder, "tap.dat"}};
+        weightsFile_2 = {dataFolder, {"weight_2_nlms_", filOrder, "tap.dat"}};
+        
+        fdWeight_0 = OpenFile(weightsFile_0,"w");
+        fdWeight_1 = OpenFile(weightsFile_1,"w");
+        fdWeight_2 = OpenFile(weightsFile_2,"w");
+    end else begin
+    
+        weightsFile_0 = {dataFolder, {"weight_0_lms_", filOrder, "tap.dat"}};
+        weightsFile_1 = {dataFolder, {"weight_1_lms_", filOrder, "tap.dat"}};
+        weightsFile_2 = {dataFolder, {"weight_2_lms_", filOrder, "tap.dat"}};
+        
+        fdWeight_0 = OpenFile(weightsFile_0,"w");
+        fdWeight_1 = OpenFile(weightsFile_1,"w");
+        fdWeight_2 = OpenFile(weightsFile_2,"w");
+    end 
+    
+end
+  generate
+        if (filter_order == 1) begin
+          if (filter_type == 2)begin //nlms specific fix
+            always @(posedge dut.s_out_axis_tvalid && dut.s_out_axis_tready) begin
+              weight_0[0] = dut.genblk1.genblk1.inst_lms_module.lms_weights_real;
+              weight_0[1] = dut.genblk1.genblk1.inst_lms_module.lms_weights_imag_V_0;
+            end
+          end else begin
+            always @(posedge dut.s_out_axis_tvalid && dut.s_out_axis_tready) begin
+                  weight_0[0] = dut.genblk1.genblk1.inst_lms_module.lms_weights_real_V_0;
+                  weight_0[1] = dut.genblk1.genblk1.inst_lms_module.lms_weights_imag_V_0;
+            end
+          end
+            always @(posedge dut.s_out_axis_tvalid && dut.s_out_axis_tready) begin
+                weightPair.I = weight_0[0][63:0];
+                weightPair.Q = weight_0[1][63:0];
+                WriteWeightSamples(fdWeight_0, weightPair);
+            end
+        end else  begin
+    
+            always @(posedge dut.s_out_axis_tvalid && dut.s_out_axis_tready) begin
+                weight_0[0] = dut.genblk1.genblk1.inst_lms_module.lms_weights_real_V_0;
+                weight_0[1] = dut.genblk1.genblk1.inst_lms_module.lms_weights_imag_V_0;
+                weightPair.I = weight_0[0][63:0];
+                weightPair.Q = weight_0[1][63:0];
+                WriteWeightSamples(fdWeight_0, weightPair);
+                
+                weight_1[0] = dut.genblk1.genblk1.inst_lms_module.lms_weights_real_V_1;
+                weight_1[1] = dut.genblk1.genblk1.inst_lms_module.lms_weights_imag_V_1;
+                weightPair.I = weight_1[0][63:0];
+                weightPair.Q = weight_1[1][63:0];
+                WriteWeightSamples(fdWeight_1, weightPair);
+        
+                weight_2[0] = dut.genblk1.genblk1.inst_lms_module.lms_weights_real_V_2;
+                weight_2[1] = dut.genblk1.genblk1.inst_lms_module.lms_weights_imag_V_2;
+                weightPair.I = weight_2[0][63:0];
+                weightPair.Q = weight_2[1][63:0];
+                WriteWeightSamples(fdWeight_2, weightPair);
+            end
+        end
+
+  endgenerate
+
+
+
   task automatic matlab_test(
-    string mainPath,
-    string auxPath,
-    string outputPath = "results.dat",
-    string dataFolder = "~/rfdev/data/",
-    reg[32:0] learning_rate = 32'h199a0000,
-    int num_packets = 1,
-    int prob = 0,
-    IN_PORT_MAIN = 0,
-    IN_PORT_AUX = 1,
-    OUT_PORT_OUT = 0
+    input string mainPath,
+    input string auxPath,
+    input string outputPath = "results.dat",
+    input string dataFolder = "~/rfdev/data/",
+    input reg[32:0] learning_rate = 32'h199a0000,
+    input int filter_order = 1,
+    input int num_packets = 1,
+    input int prob = 0,
+    input IN_PORT_MAIN = 0,
+    input IN_PORT_AUX = 1,
+    input OUT_PORT_OUT = 0
   );
     mailbox #(test_packet_t) packets_mb_main = new();
     mailbox #(test_packet_t) packets_mb_aux = new();
@@ -177,15 +262,22 @@ module rfnoc_block_adaptive_filter_tb;
     IQPair iqPairMain, iqPairAux, iqPairOut;
     int fdMain, fdAux, fdResults;
     string mainString, auxString, resultsString;
+    
+        // Weight recording registers
+    string filePath;
+    
     mainString = {dataFolder, mainPath};
     auxString = {dataFolder, auxPath};
     resultsString = {dataFolder, outputPath};
+    
+
 
     //Set BFM TREADY behavior
     blk_ctrl.set_master_stall_prob(IN_PORT_MAIN, prob);
     blk_ctrl.set_master_stall_prob(IN_PORT_AUX, prob);
     blk_ctrl.set_master_stall_prob(OUT_PORT_OUT, prob);
-    //blk_ctrl.reg_write(learning_rate,16'h00);
+    blk_ctrl.reg_write(16'h00,learning_rate);
+    blk_ctrl.reg_write(16'h00,learning_rate);
 
     // open files for reading and writing
     fdMain = OpenFile(mainString, "r");
@@ -193,6 +285,7 @@ module rfnoc_block_adaptive_filter_tb;
     fdResults = OpenFile(resultsString, "w");
 
     fork
+        
       repeat (num_packets) begin : send_process
         test_packet_t packet_main, packet_aux;
         int packet_length = SPP;
@@ -251,8 +344,45 @@ module rfnoc_block_adaptive_filter_tb;
 
     string mainFile = "main_samples.dat";
     string auxFile =  "aux_samples.dat";
-    string outputFile = "sim_results.dat";
-    string folder = "/home/user/rfdev/mnt/data/input/noise_cancel/";
+    string outputFile ;
+    //string folder = "/home/user/rfdev/mnt/data/input/noise_cancel/";
+    localparam folder = "/home/user/rfdev/mnt/data/experiments/SNR/exp3/";
+    //localparam folder = "/home/user/rfdev/mnt/data/experiments/noise_bw/exp3/";
+  
+    localparam filter_order = 3; // valid orders: 1 and 3
+    localparam filter_type =  2; // type 1 =LMS, type 2 = NLMS
+
+    // defualt learning rates
+    //localparam lms_mu = 32'h00008058;
+    //localparam nlms_mu = 32'h4ccccccd;
+    localparam lms_mu = 32'h00008058;
+    localparam nlms_mu = 32'h4ccccccd;
+
+    /* Common learning rates:
+    0.3 = 32'h4ccccccd
+    0.03 = 32'h07ae147b
+    0.003 = 32'h00c49ba6
+
+
+    7.65e-6 = 32'h00008058 -> lms for 3dB SIR
+    2.00e-8 = 32'h00000056 -> lms for -10 dB SIR
+    2.32e-10 = 32'h00000001 -> lms for -30dB SIR (LSB for mu)
+
+    2.00e-9 = 32'h00000009 -> lms for 0.03 learning rate, -10dB SIR
+    2.32e-10 = 32'h00000001 -> lms for 0.003 l_rate, -10dB SIR (LSB for mu)
+    */
+    string order;
+
+initial begin
+    if(filter_type==2) begin
+      $sformat(order, "%0d", filter_order);
+      outputFile = {"sim_results_nlms_",order,"tap" ,".dat"};
+    end else begin
+      $sformat(order, "%0d", filter_order);
+      outputFile = {"sim_results_lms_",order,"tap" ,".dat"};
+    end 
+
+end
   initial begin : tb_main
 
     // Initialize the test exec object for this testbench
@@ -283,21 +413,25 @@ module rfnoc_block_adaptive_filter_tb;
     //--------------------------------
     // Test Sequences
     //--------------------------------
-    // <Add your test code here>
-    /*
-    test.start_test("<Name your first test>", 1000us);
-    matlab_test(mainFile, auxFile, outputFile, folder, 16'h00000009, 15);
-    test.end_test();
-    */
 
-    test.start_test("<Name your first test>", 1000us);
-    matlab_test(mainFile, auxFile, outputFile, folder, 32'h199a0000, 15);
-    test.end_test();
-
+    if (filter_type == 1) begin
+      test.start_test({"LMS Test, Filter Order: ", order}, 1000us);
+      matlab_test(mainFile, auxFile, outputFile, folder, lms_mu, 1,15);
+      test.end_test();
+    end else begin
+      test.start_test({"NLMS Test, Filter Order: ", order}, 1000us);
+      matlab_test(mainFile, auxFile, outputFile, folder, nlms_mu, 1, 15);
+      test.end_test();
+    end
     //--------------------------------
     // Finish Up
     //--------------------------------
     test.end_tb();
+
+    CloseFile(fdWeight_0);
+    CloseFile(fdWeight_1);
+    CloseFile(fdWeight_2);
+
   end : tb_main
 
 endmodule : rfnoc_block_adaptive_filter_tb

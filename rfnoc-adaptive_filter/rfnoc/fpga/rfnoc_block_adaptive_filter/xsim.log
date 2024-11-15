@@ -2,8 +2,8 @@
 # Vivado v2021.1_AR76780 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Sat Nov  9 18:04:16 2024
-# Process ID: 5343
+# Start of session at: Thu Nov 14 10:18:33 2024
+# Process ID: 21191
 # Current directory: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter
 # Command line: vivado -mode batch -source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl -log xsim.log -nojournal
 # Log file: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim.log
@@ -381,7 +381,31 @@ BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_filter_fix.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_63ns_32ns_95_3_1.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_add_175s_175ns_175_2_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_udiv_65s_64ns_64_69_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_63ns_32ns_95_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mac_muladd_16s_16s_32ns_32_4_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_regslice_both.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_add_175s_175ns_175_2_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_64s_16s_80_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_95ns_81s_175_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_lms_aux_reg_M_real_V.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_95ns_80s_175_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mac_muladd_16s_16s_32s_32_4_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_64s_16s_79_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_mul_16s_16s_32_4_1.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_64s_16s_79_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_63ns_32ns_95_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mac_muladd_16s_16s_32s_32_4_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_add_175s_175ns_175_2_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_udiv_65s_64ns_64_69_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_regslice_both.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_mul_16s_16s_32_4_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_95ns_81s_175_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_64s_16s_80_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_95ns_80s_175_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_64s_16s_79_3_1.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_95ns_80s_175_3_1.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_regslice_both.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_64s_16s_80_3_1.v
@@ -389,6 +413,20 @@ BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_80s_32ns_112_3_1.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_64s_16s_79_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_80s_32ns_112_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_regslice_both.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_64s_16s_79_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_add_113s_113s_113_2_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_81s_32ns_112_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_64s_16s_80_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_64s_16s_79_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_add_113s_113s_113_2_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_81s_32ns_112_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_80s_32ns_112_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_64s_16s_80_3_1.v
+BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_regslice_both.v
 BUILDER: Adding Verilog : /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_81s_32ns_112_3_1.v
 # foreach sim_src $sim_srcs {
 #     puts "BUILDER: Adding Sim Src : $sim_src"
@@ -513,51 +551,101 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib
 INFO: [VRFC 10-311] analyzing module ctrlport_endpoint
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/gray2bin.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module gray2bin
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lms_module
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_add_113s_113s_113_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lms_module_add_113s_113s_113_2_1_Adder_0
-INFO: [VRFC 10-311] analyzing module lms_module_add_113s_113s_113_2_1_Adder_0_comb_adder
-INFO: [VRFC 10-311] analyzing module lms_module_add_113s_113s_113_2_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_64s_16s_79_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lms_module_mul_64s_16s_79_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_64s_16s_80_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lms_module_mul_64s_16s_80_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_80s_32ns_112_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lms_module_mul_80s_32ns_112_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_mul_81s_32ns_112_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lms_module_mul_81s_32ns_112_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/lms_module_regslice_both.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module lms_module_regslice_both
-INFO: [VRFC 10-311] analyzing module lms_module_regslice_both_w1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_add_175s_175ns_175_2_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_add_175s_175ns_175_2_1_Adder_0
-INFO: [VRFC 10-311] analyzing module nlms_module_add_175s_175ns_175_2_1_Adder_0_comb_adder
-INFO: [VRFC 10-311] analyzing module nlms_module_add_175s_175ns_175_2_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mac_muladd_16s_16s_32s_32_4_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_mac_muladd_16s_16s_32s_32_4_1_DSP48_1
-INFO: [VRFC 10-311] analyzing module nlms_module_mac_muladd_16s_16s_32s_32_4_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_63ns_32ns_95_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_mul_63ns_32ns_95_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_64s_16s_79_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_mul_64s_16s_79_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_64s_16s_80_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_mul_64s_16s_80_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_95ns_80s_175_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_mul_95ns_80s_175_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_95ns_81s_175_3_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_mul_95ns_81s_175_3_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_mul_mul_16s_16s_32_4_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_mul_mul_16s_16s_32_4_1_DSP48_0
-INFO: [VRFC 10-311] analyzing module nlms_module_mul_mul_16s_16s_32_4_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_regslice_both.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_regslice_both
-INFO: [VRFC 10-311] analyzing module nlms_module_regslice_both_w1
-INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/nlms_module_udiv_65s_64ns_64_69_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module nlms_module_udiv_65s_64ns_64_69_1_divider
-INFO: [VRFC 10-311] analyzing module nlms_module_udiv_65s_64ns_64_69_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_1tap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_add_113s_113s_113_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_add_113s_113s_113_2_1_Adder_0
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_add_113s_113s_113_2_1_Adder_0_comb_adder
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_add_113s_113s_113_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_64s_16s_79_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_mul_64s_16s_79_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_64s_16s_80_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_mul_64s_16s_80_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_80s_32ns_112_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_mul_80s_32ns_112_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_mul_81s_32ns_112_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_mul_81s_32ns_112_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/1tap/lms_module_1tap_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_regslice_both
+INFO: [VRFC 10-311] analyzing module lms_module_1tap_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_3tap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_add_113s_113s_113_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_add_113s_113s_113_2_1_Adder_0
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_add_113s_113s_113_2_1_Adder_0_comb_adder
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_add_113s_113s_113_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_64s_16s_79_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_mul_64s_16s_79_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_64s_16s_80_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_mul_64s_16s_80_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_80s_32ns_112_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_mul_80s_32ns_112_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_mul_81s_32ns_112_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_mul_81s_32ns_112_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/lms/3tap/lms_module_3tap_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_regslice_both
+INFO: [VRFC 10-311] analyzing module lms_module_3tap_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_add_175s_175ns_175_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_add_175s_175ns_175_2_1_Adder_0
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_add_175s_175ns_175_2_1_Adder_0_comb_adder
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_add_175s_175ns_175_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_lms_aux_reg_M_real_V.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_lms_aux_reg_M_real_V
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mac_muladd_16s_16s_32ns_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mac_muladd_16s_16s_32ns_32_4_1_DSP48_2
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mac_muladd_16s_16s_32ns_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mac_muladd_16s_16s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mac_muladd_16s_16s_32s_32_4_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mac_muladd_16s_16s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_63ns_32ns_95_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mul_63ns_32ns_95_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_64s_16s_79_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mul_64s_16s_79_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_64s_16s_80_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mul_64s_16s_80_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_95ns_80s_175_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mul_95ns_80s_175_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_95ns_81s_175_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mul_95ns_81s_175_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_mul_mul_16s_16s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mul_mul_16s_16s_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_mul_mul_16s_16s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_regslice_both
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_udiv_65s_64ns_64_69_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_udiv_65s_64ns_64_69_1_divider
+INFO: [VRFC 10-311] analyzing module nlms_module_1tap_udiv_65s_64ns_64_69_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_add_175s_175ns_175_2_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_add_175s_175ns_175_2_1_Adder_0
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_add_175s_175ns_175_2_1_Adder_0_comb_adder
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_add_175s_175ns_175_2_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mac_muladd_16s_16s_32s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mac_muladd_16s_16s_32s_32_4_1_DSP48_1
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mac_muladd_16s_16s_32s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_63ns_32ns_95_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mul_63ns_32ns_95_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_64s_16s_79_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mul_64s_16s_79_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_64s_16s_80_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mul_64s_16s_80_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_95ns_80s_175_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mul_95ns_80s_175_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_95ns_81s_175_3_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mul_95ns_81s_175_3_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_mul_mul_16s_16s_32_4_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mul_mul_16s_16s_32_4_1_DSP48_0
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_mul_mul_16s_16s_32_4_1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_regslice_both.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_regslice_both
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_regslice_both_w1
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/3tap/nlms_module_3tap_udiv_65s_64ns_64_69_1.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_udiv_65s_64ns_64_69_1_divider
+INFO: [VRFC 10-311] analyzing module nlms_module_3tap_udiv_65s_64ns_64_69_1
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/noc_shell_adaptive_filter.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module noc_shell_adaptive_filter
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/control/pulse_stretch_min.v" into library xil_defaultlib
@@ -579,7 +667,7 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/uhd/fpga/usrp3/lib
 INFO: [VRFC 10-311] analyzing module synchronizer_impl
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv" into library xil_defaultlib
-WARNING: [VRFC 10-3824] variable 'ret' must explicitly be declared as automatic or static [/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv:54]
+WARNING: [VRFC 10-3824] variable 'ret' must explicitly be declared as automatic or static [/home/user/rfdev/matlab-rfnoc/MatLabDatHandler.sv:62]
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrData.sv" into library xil_defaultlib
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv" into library xil_defaultlib
@@ -597,17 +685,24 @@ INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/uhd/fpga/usr
 INFO: [VRFC 10-311] analyzing module sim_clock_gen
 INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module rfnoc_block_adaptive_filter_tb
+WARNING: [VRFC 10-3380] identifier 'filter_order' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:130]
+WARNING: [VRFC 10-3380] identifier 'filter_type' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:131]
+WARNING: [VRFC 10-3380] identifier 'folder' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:178]
+WARNING: [VRFC 10-3380] identifier 'filter_order' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:179]
+WARNING: [VRFC 10-3380] identifier 'filter_type' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:181]
+WARNING: [VRFC 10-3380] identifier 'filter_order' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:202]
+WARNING: [VRFC 10-3380] identifier 'filter_type' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:203]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 Waiting for jobs to finish...
 No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
-xelab -wto 1cd41e6aef9244dca476dec9c60b53f6 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
+xelab -wto aecf3d342f3c4ecfb159ed61b4798759 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 1cd41e6aef9244dca476dec9c60b53f6 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
+Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto aecf3d342f3c4ecfb159ed61b4798759 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -628,9 +723,9 @@ Compiling package std.std
 Compiling package xil_defaultlib.PkgCtrlIfaceBfm
 Compiling package xil_defaultlib.PkgAxisCtrlBfm
 Compiling package xil_defaultlib.PkgChdrIfaceBfm
+Compiling package xil_defaultlib.MatLabDatHandler
 Compiling package xil_defaultlib.PkgTestExec
 Compiling package xil_defaultlib.PkgRfnocItemUtils
-Compiling package xil_defaultlib.MatLabDatHandler
 Compiling package xil_defaultlib.rfnoc_helpers
 Compiling package xil_defaultlib.$unit_AxiStreamIf_sv
 Compiling module xil_defaultlib.RfnocBackendIf
@@ -691,25 +786,25 @@ Compiling module xil_defaultlib.axi_fifo(WIDTH=65,SIZE=32'b0101)
 Compiling module xil_defaultlib.axis_packet_flush(PIPELINE="IN")
 Compiling module xil_defaultlib.axis_data_to_chdr(CHDR_W=64,NIPC...
 Compiling module xil_defaultlib.noc_shell_adaptive_filter(THIS_P...
-Compiling module xil_defaultlib.nlms_module_mul_64s_16s_80_3_1(N...
-Compiling module xil_defaultlib.nlms_module_mul_64s_16s_79_3_1(N...
-Compiling module xil_defaultlib.nlms_module_udiv_65s_64ns_64_69_...
-Compiling module xil_defaultlib.nlms_module_udiv_65s_64ns_64_69_...
-Compiling module xil_defaultlib.nlms_module_mul_63ns_32ns_95_3_1...
-Compiling module xil_defaultlib.nlms_module_mul_95ns_81s_175_3_1...
-Compiling module xil_defaultlib.nlms_module_mul_95ns_80s_175_3_1...
-Compiling module xil_defaultlib.nlms_module_add_175s_175ns_175_2...
-Compiling module xil_defaultlib.nlms_module_add_175s_175ns_175_2...
-Compiling module xil_defaultlib.nlms_module_add_175s_175ns_175_2...
-Compiling module xil_defaultlib.nlms_module_add_175s_175ns_175_2...
-Compiling module xil_defaultlib.nlms_module_mul_mul_16s_16s_32_4...
-Compiling module xil_defaultlib.nlms_module_mul_mul_16s_16s_32_4...
-Compiling module xil_defaultlib.nlms_module_mac_muladd_16s_16s_3...
-Compiling module xil_defaultlib.nlms_module_mac_muladd_16s_16s_3...
-Compiling module xil_defaultlib.nlms_module_regslice_both
-Compiling module xil_defaultlib.nlms_module_regslice_both(DataWi...
-Compiling module xil_defaultlib.nlms_module_regslice_both(DataWi...
-Compiling module xil_defaultlib.nlms_module
+Compiling module xil_defaultlib.nlms_module_3tap_mul_64s_16s_80_...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_64s_16s_79_...
+Compiling module xil_defaultlib.nlms_module_3tap_udiv_65s_64ns_6...
+Compiling module xil_defaultlib.nlms_module_3tap_udiv_65s_64ns_6...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_63ns_32ns_9...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_95ns_81s_17...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_95ns_80s_17...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_mul_16s_16s...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_mul_16s_16s...
+Compiling module xil_defaultlib.nlms_module_3tap_mac_muladd_16s_...
+Compiling module xil_defaultlib.nlms_module_3tap_mac_muladd_16s_...
+Compiling module xil_defaultlib.nlms_module_3tap_regslice_both
+Compiling module xil_defaultlib.nlms_module_3tap_regslice_both(D...
+Compiling module xil_defaultlib.nlms_module_3tap_regslice_both(D...
+Compiling module xil_defaultlib.nlms_module_3tap
 Compiling module xil_defaultlib.rfnoc_block_adaptive_filter(THIS...
 Compiling module xil_defaultlib.rfnoc_block_adaptive_filter_tb
 Compiling module xil_defaultlib.glbl
@@ -721,9 +816,9 @@ Built simulation snapshot rfnoc_block_adaptive_filter_tb_behav
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/xsim.dir/rfnoc_block_adaptive_filter_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sat Nov  9 18:05:02 2024...
-run_program: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 2433.910 ; gain = 0.000 ; free physical = 10567 ; free virtual = 15928
-INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
+INFO: [Common 17-206] Exiting Webtalk at Thu Nov 14 10:19:39 2024...
+run_program: Time (s): cpu = 00:00:33 ; elapsed = 00:00:15 . Memory (MB): peak = 2433.953 ; gain = 0.000 ; free physical = 9899 ; free virtual = 16015
+INFO: [USF-XSim-69] 'elaborate' step finished in '15' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -734,14 +829,27 @@ source rfnoc_block_adaptive_filter_tb.tcl
 ## current_wave_config
 WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/blk_ctrl was not traceable in the design for the following reason:
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/weightsFile_0 was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/weightsFile_1 was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/weightsFile_2 was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/dataFolder was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/filOrder was not traceable in the design for the following reason:
+Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
 WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/mainFile was not traceable in the design for the following reason:
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
 WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/auxFile was not traceable in the design for the following reason:
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
 WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/outputFile was not traceable in the design for the following reason:
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
-WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/folder was not traceable in the design for the following reason:
+WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/order was not traceable in the design for the following reason:
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/weight_0_nlms_3tap.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/weight_1_nlms_3tap.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/weight_2_nlms_3tap.dat
 ========================================================
 TESTBENCH STARTED: rfnoc_block_adaptive_filter_tb
 ========================================================
@@ -749,25 +857,28 @@ TESTBENCH STARTED: rfnoc_block_adaptive_filter_tb
 [TEST CASE   1] (t =      2495 ns) DONE... Passed
 [TEST CASE   2] (t =      2495 ns) BEGIN: Verify Block Info...
 [TEST CASE   2] (t =      2495 ns) DONE... Passed
-[TEST CASE   3] (t =      2495 ns) BEGIN: <Name your first test>...
-Opening file: /home/user/rfdev/mnt/data/input/noise_cancel/main_samples.dat
-Opening file: /home/user/rfdev/mnt/data/input/noise_cancel/aux_samples.dat
-Opening file: /home/user/rfdev/mnt/data/input/noise_cancel/sim_results.dat
-[TEST CASE   3] (t =     98885 ns) DONE... Passed
+[TEST CASE   3] (t =      2495 ns) BEGIN: NLMS Test, Filter Order: 3...
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/main_samples.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/aux_samples.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/sim_results_nlms_3tap.dat
+Closing file id:      -19997
+Closing file id:      -19996
+Closing file id:      -19995
+[TEST CASE   3] (t =    104070 ns) DONE... Passed
 ========================================================
 TESTBENCH FINISHED: rfnoc_block_adaptive_filter_tb
- - Time elapsed:  98885 ns
+ - Time elapsed:  104070 ns
  - Tests Run:     3
  - Tests Passed:  3
  - Tests Failed:  0
 Result: PASSED   
 ========================================================
-$finish called at time : 98885 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
-run: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:06 . Memory (MB): peak = 2498.402 ; gain = 0.000 ; free physical = 10604 ; free virtual = 15970
-xsim: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:07 . Memory (MB): peak = 2498.402 ; gain = 53.840 ; free physical = 10604 ; free virtual = 15970
+$finish called at time : 104070 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
+run: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:08 . Memory (MB): peak = 2498.410 ; gain = 0.000 ; free physical = 9913 ; free virtual = 16035
+xsim: Time (s): cpu = 00:00:00.16 ; elapsed = 00:00:09 . Memory (MB): peak = 2498.410 ; gain = 53.840 ; free physical = 9913 ; free virtual = 16035
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'rfnoc_block_adaptive_filter_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000000000us
-launch_simulation: Time (s): cpu = 00:00:30 ; elapsed = 00:00:27 . Memory (MB): peak = 2498.402 ; gain = 64.492 ; free physical = 10604 ; free virtual = 15970
+launch_simulation: Time (s): cpu = 00:00:46 ; elapsed = 00:00:38 . Memory (MB): peak = 2498.410 ; gain = 64.457 ; free physical = 9913 ; free virtual = 16035
 # if { [info exists ::env(VIV_SYNTH_TOP)] } {
 #    puts "BUILDER: Synthesizing"
 #    # Synthesize requested modules
@@ -795,4 +906,4 @@ BUILDER: Synthesizing
 #     puts "BUILDER: In GUI mode. Leaving project open."
 # }
 BUILDER: Closing project
-INFO: [Common 17-206] Exiting Vivado at Sat Nov  9 18:05:12 2024...
+INFO: [Common 17-206] Exiting Vivado at Thu Nov 14 10:19:53 2024...

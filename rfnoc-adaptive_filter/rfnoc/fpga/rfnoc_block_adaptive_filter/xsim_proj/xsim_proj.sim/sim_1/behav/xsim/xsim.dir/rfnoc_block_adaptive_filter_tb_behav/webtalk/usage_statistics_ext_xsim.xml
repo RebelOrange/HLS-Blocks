@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Sat Nov  9 18:05:11 2024'>
+<webTalkData  fileName='usage_statistics_ext_xsim.xml'  majorVersion='1' minorVersion='0' timeStamp='Thu Nov 14 10:19:51 2024'>
 <section name="__ROOT__" level="0" order="1" description="">
  <section name="software_version_and_target_device" level="1" order="1" description="">
   <keyValuePair key="beta" value="FALSE" description="" />
   <keyValuePair key="build_version" value="3247384" description="" />
-  <keyValuePair key="date_generated" value="Sat Nov  9 18:05:10 2024" description="" />
+  <keyValuePair key="date_generated" value="Thu Nov 14 10:19:50 2024" description="" />
   <keyValuePair key="os_platform" value="LIN64" description="" />
   <keyValuePair key="product_version" value="XSIM v2021.1_AR76780 (64-bit)" description="" />
-  <keyValuePair key="project_id" value="1cd41e6aef9244dca476dec9c60b53f6" description="" />
+  <keyValuePair key="project_id" value="aecf3d342f3c4ecfb159ed61b4798759" description="" />
   <keyValuePair key="project_iteration" value="2" description="" />
   <keyValuePair key="random_id" value="b86cd735-2d36-4005-b557-e348c0a5efff" description="" />
   <keyValuePair key="registration_id" value="b86cd735-2d36-4005-b557-e348c0a5efff" description="" />
@@ -22,7 +22,7 @@
   <keyValuePair key="cpu_name" value="AMD Ryzen 5 PRO 7540U w/ Radeon 740M Graphics" description="" />
   <keyValuePair key="cpu_speed" value="3193.994 MHz" description="" />
   <keyValuePair key="os_name" value="Ubuntu" description="" />
-  <keyValuePair key="os_release" value="Ubuntu 22.04.4 LTS" description="" />
+  <keyValuePair key="os_release" value="Ubuntu 22.04.5 LTS" description="" />
   <keyValuePair key="system_ram" value="16.000 GB" description="" />
   <keyValuePair key="total_processors" value="2" description="" />
  </section>
@@ -34,9 +34,9 @@
   </section>
   <section name="usage" level="2" order="2" description="">
    <keyValuePair key="iteration" value="0" description="" />
-   <keyValuePair key="runtime" value="98885 ns" description="" />
-   <keyValuePair key="simulation_memory" value="134716_KB" description="" />
-   <keyValuePair key="simulation_time" value="5.60_sec" description="" />
+   <keyValuePair key="runtime" value="104070 ns" description="" />
+   <keyValuePair key="simulation_memory" value="134752_KB" description="" />
+   <keyValuePair key="simulation_time" value="8.00_sec" description="" />
    <keyValuePair key="trace_waveform" value="true" description="" />
   </section>
  </section>

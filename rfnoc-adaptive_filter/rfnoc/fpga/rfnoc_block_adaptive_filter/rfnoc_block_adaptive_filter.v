@@ -25,7 +25,8 @@ module rfnoc_block_adaptive_filter #(
   parameter       CHDR_W          = 64,
   parameter [5:0] MTU             = 10,
   parameter       NUM_PORTS       = 1,
-  parameter       FILTER_TYPE     = "NLMS"
+  parameter       FILTER_ORDER    = 1,
+  parameter       FILTER_TYPE     = 1
 )(
   // RFNoC Framework Clocks and Resets
   input  wire                   rfnoc_chdr_clk,
@@ -210,6 +211,11 @@ module rfnoc_block_adaptive_filter #(
   // --------------------------------------------------------------------------
   localparam REG_MU_ADDR    = 16'h00; // Address for example user register
   localparam REG_MU_DEFAULT = 32'h199a0000; //default value 0.1
+  /*
+  localparam FILTER_TYPE = 1;
+  localparam FILTER_ORDER = 1;
+*/
+
 
   reg [31:0] reg_mu = REG_MU_DEFAULT;
 
@@ -245,8 +251,7 @@ module rfnoc_block_adaptive_filter #(
 
   //---------------------------------------------------------------------------
   // User Logic
-  //---------------------------------------------------------------------------
-
+  //-------------------- -------------------------------------------------------
   // sideband handling
   assign s_out_axis_teob = m_main_axis_teob;
   assign s_out_axis_teov = m_main_axis_teov;
@@ -255,8 +260,9 @@ module rfnoc_block_adaptive_filter #(
   assign s_out_axis_tlength = m_main_axis_tlength;
   
   generate 
-    if(FILTER_TYPE=="LMS") begin
-      lms_module inst_lms_module(
+    if(FILTER_TYPE==1) begin // type 1: LMS
+      if(FILTER_ORDER==1) begin
+      lms_module_1tap inst_lms_module(
         .ap_clk      (axis_data_clk),
         .ap_rst_n    (~axis_data_rst),
 
@@ -286,8 +292,8 @@ module rfnoc_block_adaptive_filter #(
         .mu           (reg_mu)
 
       );
-    end else if(FILTER_TYPE=="NLMS") begin
-      nlms_module inst_nlms_module(
+      end else begin
+      lms_module_3tap inst_lms_module(
         .ap_clk      (axis_data_clk),
         .ap_rst_n    (~axis_data_rst),
 
@@ -317,6 +323,75 @@ module rfnoc_block_adaptive_filter #(
         .mu           (reg_mu)
 
       );
+
+
+    end
+    end else if(FILTER_TYPE==2) begin //type 2 = NLMS
+      if(FILTER_ORDER==1) begin
+      nlms_module_1tap inst_lms_module(
+        .ap_clk      (axis_data_clk),
+        .ap_rst_n    (~axis_data_rst),
+
+        .main_in_TDATA  (m_main_axis_tdata),
+        .main_in_TVALID (m_main_axis_tvalid),
+        .main_in_TREADY (m_main_axis_tready),
+        .main_in_TKEEP  (),
+        .main_in_TSTRB  (),
+        .main_in_TLAST  (m_main_axis_tlast),
+
+
+        .aux_in_TDATA  (m_aux_axis_tdata),
+        .aux_in_TVALID (m_aux_axis_tvalid),
+        .aux_in_TREADY (m_aux_axis_tready),
+        .aux_in_TKEEP  (),
+        .aux_in_TSTRB  (),
+        .aux_in_TLAST  (m_aux_axis_tlast),
+        
+
+        .output_r_TDATA  (s_out_axis_tdata),
+        .output_r_TVALID (s_out_axis_tvalid),
+        .output_r_TREADY (s_out_axis_tready),
+        .output_r_TKEEP  (),
+        .output_r_TSTRB  (),
+        .output_r_TLAST  (s_out_axis_tlast),
+
+        .mu           (reg_mu)
+
+      );
+
+      end else begin
+      nlms_module_3tap inst_lms_module(
+        .ap_clk      (axis_data_clk),
+        .ap_rst_n    (~axis_data_rst),
+
+        .main_in_TDATA  (m_main_axis_tdata),
+        .main_in_TVALID (m_main_axis_tvalid),
+        .main_in_TREADY (m_main_axis_tready),
+        .main_in_TKEEP  (),
+        .main_in_TSTRB  (),
+        .main_in_TLAST  (m_main_axis_tlast),
+
+
+        .aux_in_TDATA  (m_aux_axis_tdata),
+        .aux_in_TVALID (m_aux_axis_tvalid),
+        .aux_in_TREADY (m_aux_axis_tready),
+        .aux_in_TKEEP  (),
+        .aux_in_TSTRB  (),
+        .aux_in_TLAST  (m_aux_axis_tlast),
+        
+
+        .output_r_TDATA  (s_out_axis_tdata),
+        .output_r_TVALID (s_out_axis_tvalid),
+        .output_r_TREADY (s_out_axis_tready),
+        .output_r_TKEEP  (),
+        .output_r_TSTRB  (),
+        .output_r_TLAST  (s_out_axis_tlast),
+
+        .mu           (reg_mu)
+
+      );
+
+      end
     end else if (FILTER_TYPE=="FIR") begin
 
     end
