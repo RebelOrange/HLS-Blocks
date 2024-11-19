@@ -179,10 +179,15 @@ initial begin
       $sformat(filOrder, "%0d", filter_order);
 
     if(filter_type == 2) begin
-        weightsFile_0 = {dataFolder, {"weight_0_nlms_", filOrder, "tap.dat"}};
-        weightsFile_1 = {dataFolder, {"weight_1_nlms_", filOrder, "tap.dat"}};
-        weightsFile_2 = {dataFolder, {"weight_2_nlms_", filOrder, "tap.dat"}};
-        
+      if(nlms_mu == 32'h4ccccccd) begin
+        weightsFile_0 = {dataFolder, {"weight_0_nlms_", filOrder, "tap_","0_3",".dat"}};
+        weightsFile_1 = {dataFolder, {"weight_1_nlms_", filOrder, "tap_","0_3",".dat"}};
+        weightsFile_2 = {dataFolder, {"weight_2_nlms_", filOrder, "tap_","0_3",".dat"}};
+      end else if (nlms_mu == 32'h07ae147b) begin
+        weightsFile_0 = {dataFolder, {"weight_0_nlms_", filOrder, "tap_","0_03",".dat"}};
+        weightsFile_1 = {dataFolder, {"weight_1_nlms_", filOrder, "tap_","0_03",".dat"}};
+        weightsFile_2 = {dataFolder, {"weight_2_nlms_", filOrder, "tap_","0_03",".dat"}};
+      end
         fdWeight_0 = OpenFile(weightsFile_0,"w");
         fdWeight_1 = OpenFile(weightsFile_1,"w");
         fdWeight_2 = OpenFile(weightsFile_2,"w");
@@ -346,8 +351,8 @@ end
     string auxFile =  "aux_samples.dat";
     string outputFile ;
     //string folder = "/home/user/rfdev/mnt/data/input/noise_cancel/";
+    //localparam folder = "/home/user/rfdev/mnt/data/experiments/records/path_length/exp4/";
     localparam folder = "/home/user/rfdev/mnt/data/experiments/SNR/exp3/";
-    //localparam folder = "/home/user/rfdev/mnt/data/experiments/noise_bw/exp3/";
   
     localparam filter_order = 3; // valid orders: 1 and 3
     localparam filter_type =  2; // type 1 =LMS, type 2 = NLMS
@@ -356,7 +361,8 @@ end
     //localparam lms_mu = 32'h00008058;
     //localparam nlms_mu = 32'h4ccccccd;
     localparam lms_mu = 32'h00008058;
-    localparam nlms_mu = 32'h4ccccccd;
+    //localparam nlms_mu = 32'h4ccccccd;
+    localparam nlms_mu = 32'h07ae147b;
 
     /* Common learning rates:
     0.3 = 32'h4ccccccd
@@ -376,7 +382,11 @@ end
 initial begin
     if(filter_type==2) begin
       $sformat(order, "%0d", filter_order);
-      outputFile = {"sim_results_nlms_",order,"tap" ,".dat"};
+      if(nlms_mu == 32'h4ccccccd) begin
+        outputFile = {"sim_results_nlms_",order,"tap" ,"0_3",".dat"};
+      end else if(nlms_mu == 32'h07ae147b) begin
+        outputFile = {"sim_results_nlms_",order,"tap" ,"0_03",".dat"};
+      end
     end else begin
       $sformat(order, "%0d", filter_order);
       outputFile = {"sim_results_lms_",order,"tap" ,".dat"};

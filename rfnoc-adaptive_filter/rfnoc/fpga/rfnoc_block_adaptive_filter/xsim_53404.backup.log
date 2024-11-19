@@ -2,8 +2,8 @@
 # Vivado v2021.1_AR76780 (64-bit)
 # SW Build 3247384 on Thu Jun 10 19:36:07 MDT 2021
 # IP Build 3246043 on Fri Jun 11 00:30:35 MDT 2021
-# Start of session at: Thu Nov 14 10:06:35 2024
-# Process ID: 15780
+# Start of session at: Sun Nov 17 19:51:54 2024
+# Process ID: 53404
 # Current directory: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter
 # Command line: vivado -mode batch -source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl -log xsim.log -nojournal
 # Log file: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim.log
@@ -690,19 +690,21 @@ WARNING: [VRFC 10-3380] identifier 'filter_type' is used before its declaration 
 WARNING: [VRFC 10-3380] identifier 'folder' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:178]
 WARNING: [VRFC 10-3380] identifier 'filter_order' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:179]
 WARNING: [VRFC 10-3380] identifier 'filter_type' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:181]
-WARNING: [VRFC 10-3380] identifier 'filter_order' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:202]
-WARNING: [VRFC 10-3380] identifier 'filter_type' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:203]
+WARNING: [VRFC 10-3380] identifier 'nlms_mu' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:182]
+WARNING: [VRFC 10-3380] identifier 'nlms_mu' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:186]
+WARNING: [VRFC 10-3380] identifier 'filter_order' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:207]
+WARNING: [VRFC 10-3380] identifier 'filter_type' is used before its declaration [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/rfnoc_block_adaptive_filter_tb.sv:208]
 INFO: [VRFC 10-2263] Analyzing Verilog file "/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module glbl
 Waiting for jobs to finish...
 No pending jobs, compilation finished.
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
 INFO: [USF-XSim-3] XSim::Elaborate design
 INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
-xelab -wto 39b3657b5b0e4ebdb7a1279b588f8273 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
+xelab -wto 5b2db6c8809f4a33be7877ef53e476fc --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns
 Vivado Simulator v2021.1
 Copyright 1986-1999, 2001-2021 Xilinx, Inc. All Rights Reserved.
-Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 39b3657b5b0e4ebdb7a1279b588f8273 --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
+Running: /opt/Xilinx/Vivado/2021.1/bin/unwrapped/lnx64.o/xelab -wto 5b2db6c8809f4a33be7877ef53e476fc --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/user/rfdev//uhd/fpga/usrp3/top/../.. -d WORKING_DIR=/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip --snapshot rfnoc_block_adaptive_filter_tb_behav xil_defaultlib.rfnoc_block_adaptive_filter_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
 Using 8 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
@@ -786,18 +788,25 @@ Compiling module xil_defaultlib.axi_fifo(WIDTH=65,SIZE=32'b0101)
 Compiling module xil_defaultlib.axis_packet_flush(PIPELINE="IN")
 Compiling module xil_defaultlib.axis_data_to_chdr(CHDR_W=64,NIPC...
 Compiling module xil_defaultlib.noc_shell_adaptive_filter(THIS_P...
-Compiling module xil_defaultlib.lms_module_3tap_mul_64s_16s_80_3...
-Compiling module xil_defaultlib.lms_module_3tap_mul_64s_16s_79_3...
-Compiling module xil_defaultlib.lms_module_3tap_mul_81s_32ns_112...
-Compiling module xil_defaultlib.lms_module_3tap_mul_80s_32ns_112...
-Compiling module xil_defaultlib.lms_module_3tap_add_113s_113s_11...
-Compiling module xil_defaultlib.lms_module_3tap_add_113s_113s_11...
-Compiling module xil_defaultlib.lms_module_3tap_add_113s_113s_11...
-Compiling module xil_defaultlib.lms_module_3tap_add_113s_113s_11...
-Compiling module xil_defaultlib.lms_module_3tap_regslice_both
-Compiling module xil_defaultlib.lms_module_3tap_regslice_both(Da...
-Compiling module xil_defaultlib.lms_module_3tap_regslice_both(Da...
-Compiling module xil_defaultlib.lms_module_3tap
+Compiling module xil_defaultlib.nlms_module_3tap_mul_64s_16s_80_...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_64s_16s_79_...
+Compiling module xil_defaultlib.nlms_module_3tap_udiv_65s_64ns_6...
+Compiling module xil_defaultlib.nlms_module_3tap_udiv_65s_64ns_6...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_63ns_32ns_9...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_95ns_81s_17...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_95ns_80s_17...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_add_175s_175ns_...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_mul_16s_16s...
+Compiling module xil_defaultlib.nlms_module_3tap_mul_mul_16s_16s...
+Compiling module xil_defaultlib.nlms_module_3tap_mac_muladd_16s_...
+Compiling module xil_defaultlib.nlms_module_3tap_mac_muladd_16s_...
+Compiling module xil_defaultlib.nlms_module_3tap_regslice_both
+Compiling module xil_defaultlib.nlms_module_3tap_regslice_both(D...
+Compiling module xil_defaultlib.nlms_module_3tap_regslice_both(D...
+Compiling module xil_defaultlib.nlms_module_3tap
 Compiling module xil_defaultlib.rfnoc_block_adaptive_filter(THIS...
 Compiling module xil_defaultlib.rfnoc_block_adaptive_filter_tb
 Compiling module xil_defaultlib.glbl
@@ -809,9 +818,9 @@ Built simulation snapshot rfnoc_block_adaptive_filter_tb_behav
     ** Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
 
 source /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/xsim.dir/rfnoc_block_adaptive_filter_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Thu Nov 14 10:07:39 2024...
-run_program: Time (s): cpu = 00:00:24 ; elapsed = 00:00:14 . Memory (MB): peak = 2433.949 ; gain = 0.000 ; free physical = 9896 ; free virtual = 16013
-INFO: [USF-XSim-69] 'elaborate' step finished in '14' seconds
+INFO: [Common 17-206] Exiting Webtalk at Sun Nov 17 19:52:41 2024...
+run_program: Time (s): cpu = 00:00:21 ; elapsed = 00:00:11 . Memory (MB): peak = 2433.949 ; gain = 0.000 ; free physical = 11104 ; free virtual = 16067
+INFO: [USF-XSim-69] 'elaborate' step finished in '11' seconds
 INFO: [USF-XSim-4] XSim::Simulate design
 INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.sim/sim_1/behav/xsim'
 INFO: [USF-XSim-98] *** Running xsim
@@ -840,9 +849,9 @@ WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/outputFile was not tr
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
 WARNING: Simulation object /rfnoc_block_adaptive_filter_tb/order was not traceable in the design for the following reason:
 Vivado Simulator does not support tracing of System Verilog Dynamic Type object.
-Opening file: /home/user/rfdev/mnt/data/experiments/noise_bw/exp2/weight_0_lms_3tap.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/noise_bw/exp2/weight_1_lms_3tap.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/noise_bw/exp2/weight_2_lms_3tap.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp1/weight_0_nlms_3tap_0_03.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp1/weight_1_nlms_3tap_0_03.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp1/weight_2_nlms_3tap_0_03.dat
 ========================================================
 TESTBENCH STARTED: rfnoc_block_adaptive_filter_tb
 ========================================================
@@ -850,28 +859,28 @@ TESTBENCH STARTED: rfnoc_block_adaptive_filter_tb
 [TEST CASE   1] (t =      2495 ns) DONE... Passed
 [TEST CASE   2] (t =      2495 ns) BEGIN: Verify Block Info...
 [TEST CASE   2] (t =      2495 ns) DONE... Passed
-[TEST CASE   3] (t =      2495 ns) BEGIN: LMS Test, Filter Order: 3...
-Opening file: /home/user/rfdev/mnt/data/experiments/noise_bw/exp2/main_samples.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/noise_bw/exp2/aux_samples.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/noise_bw/exp2/sim_results_lms_3tap.dat
+[TEST CASE   3] (t =      2495 ns) BEGIN: NLMS Test, Filter Order: 3...
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp1/main_samples.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp1/aux_samples.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp1/sim_results_nlms_3tap0_03.dat
 Closing file id:      -19997
 Closing file id:      -19996
 Closing file id:      -19995
-[TEST CASE   3] (t =    103715 ns) DONE... Passed
+[TEST CASE   3] (t =    104070 ns) DONE... Passed
 ========================================================
 TESTBENCH FINISHED: rfnoc_block_adaptive_filter_tb
- - Time elapsed:  103715 ns
+ - Time elapsed:  104070 ns
  - Tests Run:     3
  - Tests Passed:  3
  - Tests Failed:  0
 Result: PASSED   
 ========================================================
-$finish called at time : 103715 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
-run: Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:06 . Memory (MB): peak = 2498.406 ; gain = 0.000 ; free physical = 9946 ; free virtual = 16068
-xsim: Time (s): cpu = 00:00:00.13 ; elapsed = 00:00:07 . Memory (MB): peak = 2498.406 ; gain = 53.840 ; free physical = 9946 ; free virtual = 16068
+$finish called at time : 104070 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
+run: Time (s): cpu = 00:00:00.10 ; elapsed = 00:00:06 . Memory (MB): peak = 2498.406 ; gain = 0.000 ; free physical = 11131 ; free virtual = 16101
+xsim: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:10 . Memory (MB): peak = 2498.406 ; gain = 53.840 ; free physical = 11131 ; free virtual = 16101
 INFO: [USF-XSim-96] XSim completed. Design snapshot 'rfnoc_block_adaptive_filter_tb_behav' loaded.
 INFO: [USF-XSim-97] XSim simulation ran for 1000000000us
-launch_simulation: Time (s): cpu = 00:00:37 ; elapsed = 00:00:35 . Memory (MB): peak = 2498.406 ; gain = 64.457 ; free physical = 9945 ; free virtual = 16068
+launch_simulation: Time (s): cpu = 00:00:30 ; elapsed = 00:00:31 . Memory (MB): peak = 2498.406 ; gain = 64.457 ; free physical = 11131 ; free virtual = 16101
 # if { [info exists ::env(VIV_SYNTH_TOP)] } {
 #    puts "BUILDER: Synthesizing"
 #    # Synthesize requested modules
@@ -899,4 +908,4 @@ BUILDER: Synthesizing
 #     puts "BUILDER: In GUI mode. Leaving project open."
 # }
 BUILDER: Closing project
-INFO: [Common 17-206] Exiting Vivado at Thu Nov 14 10:07:50 2024...
+INFO: [Common 17-206] Exiting Vivado at Sun Nov 17 19:52:55 2024...
