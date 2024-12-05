@@ -154,6 +154,60 @@ module rfnoc_block_adaptive_filter_tb;
   );
 
   //---------------------------------------------------------------------------
+
+    string mainFile = "main_samples_trunc.dat";
+    string auxFile =  "aux_samples_trunc.dat";
+    string outputFile ;
+    //string folder = "/home/user/rfdev/mnt/data/input/noise_cancel/";
+    //localparam folder = "/home/user/rfdev/mnt/data/experiments/records/path_length/exp4/";
+ localparam folder = "/home/user/rfdev/mnt/data/experiments/records/path_length/exp4/";
+    localparam num_packets = 15; //15 for experiments, 150 for records
+  
+    localparam filter_order = 3; // valid orders: 1 and 3
+    localparam filter_type =  2; // type 1 =LMS, type 2 = NLMS
+
+    // defualt learning rates
+    //localparam lms_mu = 32'h00008058;
+    //localparam nlms_mu = 32'h4ccccccd;
+    localparam lms_mu = 32'h00008058;
+    //localparam nlms_mu = 32'h4ccccccd;
+ localparam nlms_mu = 32'h00c49ba6;
+
+    /* Common learning rates:
+    0.5 = 32'h80000000
+    0.3 = 32'h4ccccccd
+    0.03 = 32'h07ae147b
+    0.01 = 32'h028f5c29
+    0.001 = 32'h0018937
+    0.003 = 32'h00c49ba6
+
+
+    7.65e-6 = 32'h00008058 -> lms for 3dB SIR
+    2.00e-8 = 32'h00000056 -> lms for -10 dB SIR
+    2.32e-10 = 32'h00000001 -> lms for -30dB SIR (LSB for mu)
+
+    2.00e-9 = 32'h00000009 -> lms for 0.03 learning rate, -10dB SIR
+    2.32e-10 = 32'h00000001 -> lms for 0.003 l_rate, -10dB SIR (LSB for mu)
+    */
+    string order;
+    real double_learning_rate;
+    string string_learning_rate;
+    initial begin 
+        double_learning_rate = real'(nlms_mu)/(2.0**32);
+        $sformat(string_learning_rate, "%0.4f", double_learning_rate);
+    end
+
+initial begin
+    if(filter_type==2) begin
+      $sformat(order, "%0d", filter_order);
+        outputFile = {"sim_results_nlms_",order,"tap_" ,string_learning_rate,".dat"};
+    end else begin
+      $sformat(order, "%0d", filter_order);
+      outputFile = {"sim_results_lms_",order,"tap" ,".dat"};
+    end 
+
+end
+
     typedef struct {
         item_t  samples[$];
         chdr_word_t mdata[$];
@@ -179,15 +233,10 @@ initial begin
       $sformat(filOrder, "%0d", filter_order);
 
     if(filter_type == 2) begin
-      if(nlms_mu == 32'h4ccccccd) begin
-        weightsFile_0 = {dataFolder, {"weight_0_nlms_", filOrder, "tap_","0_3",".dat"}};
-        weightsFile_1 = {dataFolder, {"weight_1_nlms_", filOrder, "tap_","0_3",".dat"}};
-        weightsFile_2 = {dataFolder, {"weight_2_nlms_", filOrder, "tap_","0_3",".dat"}};
-      end else if (nlms_mu == 32'h07ae147b) begin
-        weightsFile_0 = {dataFolder, {"weight_0_nlms_", filOrder, "tap_","0_03",".dat"}};
-        weightsFile_1 = {dataFolder, {"weight_1_nlms_", filOrder, "tap_","0_03",".dat"}};
-        weightsFile_2 = {dataFolder, {"weight_2_nlms_", filOrder, "tap_","0_03",".dat"}};
-      end
+        weightsFile_0 = {dataFolder, {"weight_0_nlms_", filOrder, "tap_",string_learning_rate,".dat"}};
+        weightsFile_1 = {dataFolder, {"weight_1_nlms_", filOrder, "tap_",string_learning_rate,".dat"}};
+        weightsFile_2 = {dataFolder, {"weight_2_nlms_", filOrder, "tap_",string_learning_rate,".dat"}};
+     
         fdWeight_0 = OpenFile(weightsFile_0,"w");
         fdWeight_1 = OpenFile(weightsFile_1,"w");
         fdWeight_2 = OpenFile(weightsFile_2,"w");
@@ -347,52 +396,6 @@ end
   // Main Test Process
   //---------------------------------------------------------------------------
 
-    string mainFile = "main_samples.dat";
-    string auxFile =  "aux_samples.dat";
-    string outputFile ;
-    //string folder = "/home/user/rfdev/mnt/data/input/noise_cancel/";
-    //localparam folder = "/home/user/rfdev/mnt/data/experiments/records/path_length/exp4/";
-    localparam folder = "/home/user/rfdev/mnt/data/experiments/SNR/exp3/";
-  
-    localparam filter_order = 3; // valid orders: 1 and 3
-    localparam filter_type =  2; // type 1 =LMS, type 2 = NLMS
-
-    // defualt learning rates
-    //localparam lms_mu = 32'h00008058;
-    //localparam nlms_mu = 32'h4ccccccd;
-    localparam lms_mu = 32'h00008058;
-    //localparam nlms_mu = 32'h4ccccccd;
-    localparam nlms_mu = 32'h07ae147b;
-
-    /* Common learning rates:
-    0.3 = 32'h4ccccccd
-    0.03 = 32'h07ae147b
-    0.003 = 32'h00c49ba6
-
-
-    7.65e-6 = 32'h00008058 -> lms for 3dB SIR
-    2.00e-8 = 32'h00000056 -> lms for -10 dB SIR
-    2.32e-10 = 32'h00000001 -> lms for -30dB SIR (LSB for mu)
-
-    2.00e-9 = 32'h00000009 -> lms for 0.03 learning rate, -10dB SIR
-    2.32e-10 = 32'h00000001 -> lms for 0.003 l_rate, -10dB SIR (LSB for mu)
-    */
-    string order;
-
-initial begin
-    if(filter_type==2) begin
-      $sformat(order, "%0d", filter_order);
-      if(nlms_mu == 32'h4ccccccd) begin
-        outputFile = {"sim_results_nlms_",order,"tap" ,"0_3",".dat"};
-      end else if(nlms_mu == 32'h07ae147b) begin
-        outputFile = {"sim_results_nlms_",order,"tap" ,"0_03",".dat"};
-      end
-    end else begin
-      $sformat(order, "%0d", filter_order);
-      outputFile = {"sim_results_lms_",order,"tap" ,".dat"};
-    end 
-
-end
   initial begin : tb_main
 
     // Initialize the test exec object for this testbench
@@ -426,11 +429,11 @@ end
 
     if (filter_type == 1) begin
       test.start_test({"LMS Test, Filter Order: ", order}, 1000us);
-      matlab_test(mainFile, auxFile, outputFile, folder, lms_mu, 1,15);
+      matlab_test(mainFile, auxFile, outputFile, folder, lms_mu, 1, 150);
       test.end_test();
     end else begin
       test.start_test({"NLMS Test, Filter Order: ", order}, 1000us);
-      matlab_test(mainFile, auxFile, outputFile, folder, nlms_mu, 1, 15);
+      matlab_test(mainFile, auxFile, outputFile, folder, nlms_mu, 1, 150);
       test.end_test();
     end
     //--------------------------------

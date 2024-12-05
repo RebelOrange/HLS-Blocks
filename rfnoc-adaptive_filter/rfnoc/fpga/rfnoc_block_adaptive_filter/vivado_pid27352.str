@@ -1,0 +1,113 @@
+/*
+
+Xilinx Vivado v2021.1_AR76780 (64-bit) [Major: 2021, Minor: 1]
+SW Build: 3247384 on Thu Jun 10 19:36:07 MDT 2021
+IP Build: 3246043 on Fri Jun 11 00:30:35 MDT 2021
+
+Process ID (PID): 27352
+License: Customer
+Mode: GUI Mode
+
+Current time: 	Sun Nov 24 19:37:35 PST 2024
+Time zone: 	Pacific Standard Time (America/Los_Angeles)
+
+OS: Ubuntu
+OS Version: 6.8.0-48-generic
+OS Architecture: amd64
+Available processors (cores): 6
+
+Display: 0
+Screen size: 1920x1200
+Screen resolution (DPI): 100
+Available screens: 1
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+Scale size: 12
+
+Java version: 	11.0.2 64-bit
+Java home: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2
+Java executable: 	/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/bin/java
+Java initial memory (-Xms): 	256 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	user
+User home directory: /home/user
+User working directory: /home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter
+User country: 	US
+User language: 	en
+User locale: 	en_US
+
+RDI_BASEROOT: /opt/Xilinx/Vivado
+HDI_APPROOT: /opt/Xilinx/Vivado/2021.1
+RDI_DATADIR: /opt/Xilinx/Vivado/2021.1/patches/AR76780/vivado/data:/opt/Xilinx/Vivado/2021.1/data
+RDI_BINDIR: /opt/Xilinx/Vivado/2021.1/bin
+
+Vivado preferences file: /home/user/.Xilinx/Vivado/2021.1/vivado.xml
+Vivado preferences directory: /home/user/.Xilinx/Vivado/2021.1/
+Vivado layouts directory: /home/user/.Xilinx/Vivado/2021.1/data/layouts
+PlanAhead jar file: 	/opt/Xilinx/Vivado/2021.1/lib/classes/planAhead.jar
+Vivado log file: 	/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim.log
+Vivado journal file: 	
+Engine tmp dir: 	./.Xil/Vivado-27352-ubuntuvm
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /opt/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_DSP: /opt/Xilinx/Vivado/2021.1/ids_lite/ISE
+XILINX_HLS: /opt/Xilinx/Vitis_HLS/2021.1
+XILINX_PLANAHEAD: /opt/Xilinx/Vivado/2021.1
+XILINX_VITIS: 
+XILINX_VIVADO: /opt/Xilinx/Vivado/2021.1
+XILINX_VIVADO_HLS: /opt/Xilinx/Vivado/2021.1
+
+
+GUI allocated memory:	308 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 1,769 MB
+
+Copyright 1986-2021 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// TclEventType: START_PROGRESS_DIALOG
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: FLOW_ADDED
+// bz (cs):  Sourcing Tcl script '/home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl' : addNotify
+// Tcl Message: source /home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl 
+// Tcl Message: BUILDER: Creating Vivado simulation project part xc7k410tffg900-2 
+// Tcl Message: # puts "BUILDER: Overriding part name to Zynq 7000 SoC: xc7z020-clg484-3" 
+// Tcl Message: BUILDER: Overriding part name to Zynq 7000 SoC: xc7z020-clg484-3 
+// Tcl Message: # set part_name xc7z020clg484-3 # create_project -part $part_name -force $project_name/$project_name 
+selectButton(RDIResource.ProgressDialog_CANCEL, "Cancel"); // a
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_ADD
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 114 MB (+116682kb) [00:00:11]
+// [Engine Memory]: 1,738 MB (+1671043kb) [00:00:11]
+// [GUI Memory]: 125 MB (+6140kb) [00:00:12]
+// WARNING: HEventQueue.dispatchEvent() is taking  2726 ms.
+// TclEventType: STOP_PROGRESS_DIALOG
+// Tcl Message: INFO: [Common 17-41] Interrupt caught. Command should exit soon. 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2338] Canceling the changes to the IP catalog. Reverting the catalog back to its previous state. INFO: [IP_Flow 19-2340] The IP catalog has been returned to its previous state. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,725 MB. GUI used memory: 65 MB. Current time: 11/24/24, 7:37:35 PM PST
+// Tcl Message: INFO: [Common 17-344] 'source' was cancelled 
+dismissDialog("Sourcing Tcl script '/home/user/rfdev/uhd/fpga/usrp3/tools/scripts/viv_sim_project.tcl'"); // bz
+// TclEventType: STOP_PROGRESS_DIALOG
+closeMainWindow("xsim_proj/xsim_proj - [/home/user/rfdev/blocks/rfnoc-adaptive_filter/rfnoc/fpga/rfnoc_block_adaptive_filter/xsim_proj/xsim_proj.xpr] - Vivado 2021.1_AR76780"); // cs
+// HOptionPane Warning: 'A background task is running. Please wait until it completes to exit Vivado. If you choose to abort background task and exit immediately, you will lose all unsaved changes to project. (Background Task)'

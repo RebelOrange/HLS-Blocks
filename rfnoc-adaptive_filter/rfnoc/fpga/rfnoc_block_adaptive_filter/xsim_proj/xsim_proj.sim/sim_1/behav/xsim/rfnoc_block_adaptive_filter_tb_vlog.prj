@@ -51,6 +51,7 @@ verilog xil_defaultlib  --include "../../../../../../../../../../uhd/fpga/usrp3/
 "../../../../../../../../hls-srcs/nlms/1tap/nlms_module_1tap_udiv_65s_64ns_64_69_1.v" \
 "../../../../../../../../hls-srcs/nlms/3tap/nlms_module_3tap.v" \
 "../../../../../../../../hls-srcs/nlms/3tap/nlms_module_3tap_add_175s_175ns_175_2_1.v" \
+"../../../../../../../../hls-srcs/nlms/3tap/nlms_module_3tap_mac_muladd_16s_16s_32ns_32_4_1.v" \
 "../../../../../../../../hls-srcs/nlms/3tap/nlms_module_3tap_mac_muladd_16s_16s_32s_32_4_1.v" \
 "../../../../../../../../hls-srcs/nlms/3tap/nlms_module_3tap_mul_63ns_32ns_95_3_1.v" \
 "../../../../../../../../hls-srcs/nlms/3tap/nlms_module_3tap_mul_64s_16s_79_3_1.v" \

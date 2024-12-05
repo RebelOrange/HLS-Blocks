@@ -1,9 +1,7 @@
 Time resolution is 1 ps
-WARNING: File ./nlms_module_1tap_lms_aux_reg_M_real_V.dat referenced on /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_lms_aux_reg_M_real_V.v at line 25 cannot be opened for reading. Please ensure that this file is available in the current working directory.
-WARNING: File ./nlms_module_1tap_lms_aux_reg_M_real_V.dat referenced on /home/user/rfdev/blocks/rfnoc-adaptive_filter/hls-srcs/nlms/1tap/nlms_module_1tap_lms_aux_reg_M_real_V.v at line 25 cannot be opened for reading. Please ensure that this file is available in the current working directory.
-Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/weight_0_nlms_1tap_0_03.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/weight_1_nlms_1tap_0_03.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/weight_2_nlms_1tap_0_03.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/records/path_length/exp4/weight_0_nlms_3tap_0.0030.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/records/path_length/exp4/weight_1_nlms_3tap_0.0030.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/records/path_length/exp4/weight_2_nlms_3tap_0.0030.dat
 ========================================================
 TESTBENCH STARTED: rfnoc_block_adaptive_filter_tb
 ========================================================
@@ -11,20 +9,10 @@ TESTBENCH STARTED: rfnoc_block_adaptive_filter_tb
 [TEST CASE   1] (t =      2495 ns) DONE... Passed
 [TEST CASE   2] (t =      2495 ns) BEGIN: Verify Block Info...
 [TEST CASE   2] (t =      2495 ns) DONE... Passed
-[TEST CASE   3] (t =      2495 ns) BEGIN: NLMS Test, Filter Order: 1...
-Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/main_samples.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/aux_samples.dat
-Opening file: /home/user/rfdev/mnt/data/experiments/SNR/exp3/sim_results_nlms_1tap0_03.dat
-Closing file id:      -19997
-Closing file id:      -19996
-Closing file id:      -19995
-[TEST CASE   3] (t =    415465 ns) DONE... Passed
-========================================================
-TESTBENCH FINISHED: rfnoc_block_adaptive_filter_tb
- - Time elapsed:  415465 ns
- - Tests Run:     3
- - Tests Passed:  3
- - Tests Failed:  0
-Result: PASSED   
-========================================================
-$finish called at time : 415465 ns : File "/home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
+[TEST CASE   3] (t =      2495 ns) BEGIN: NLMS Test, Filter Order: 3...
+Opening file: /home/user/rfdev/mnt/data/experiments/records/path_length/exp4/main_samples_trunc.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/records/path_length/exp4/aux_samples_trunc.dat
+Opening file: /home/user/rfdev/mnt/data/experiments/records/path_length/exp4/sim_results_nlms_3tap_0.0030.dat
+Fatal: Timeout: Test "NLMS Test, Filter Order: 3" time limit exceeded
+Time: 1002495 ns  Iteration: 0  Process: /PkgTestExec/TestExec::start_timeout/Block260_9/timeout  Scope: PkgTestExec.\TestExec::assert_sev   File: /home/user/rfdev/uhd/fpga/usrp3/sim/rfnoc/PkgTestExec.sv Line: 235
+$finish called at time : 1002495 ns

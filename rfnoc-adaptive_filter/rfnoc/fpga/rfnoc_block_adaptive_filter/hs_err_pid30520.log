@@ -1,0 +1,16 @@
+#
+# An unexpected error has occurred (11)
+#
+Stack:
+/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xc04c3b) [0x7a39ac404c3b]
+/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(JVM_handle_linux_signal+0x14e) [0x7a39ac4098de]
+/opt/Xilinx/Vivado/2021.1/tps/lnx64/jre11.0.2/lib//server/libjvm.so(+0xbfd538) [0x7a39ac3fd538]
+/lib/x86_64-linux-gnu/libc.so.6(+0x42520) [0x7a3a1ba42520]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_filemgmt.so(+0x34eba4) [0x7a39ddf4eba4]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_filemgmt.so(+0x289640) [0x7a39dde89640]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_filemgmt.so(HDDAFilteredSrcIter::getNext_()+0x345) [0x7a39ddedca65]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_filemgmt.so(HDDAFilteredSrcIter::next()+0x11) [0x7a39ddedccc1]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_filemgmt.so(HADLSrcScanFileSet::addFilesFrom(HADAFileSet const&, bool)+0x343) [0x7a39de12afa3]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_filemgmt.so(HADLEditorAssist::refresh()+0x38b) [0x7a39de11e95b]
+/opt/Xilinx/Vivado/2021.1/lib/lnx64.o/librdi_filemgmt.so(Java_ui_data_srcscan_srcscani_EditorAssist_1refresh+0x17) [0x7a39de13c627]
+[0x7a3992c0f8d0]
