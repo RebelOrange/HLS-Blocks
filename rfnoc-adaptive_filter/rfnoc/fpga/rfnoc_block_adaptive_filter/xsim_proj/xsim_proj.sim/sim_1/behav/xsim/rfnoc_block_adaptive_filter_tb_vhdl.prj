@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../../../../../../uhd/fpga/usrp3/lib/packet_proc/arp_responder/arp_responder.vhd" \
+"../../../../../../../../../../uhd/fpga/usrp3/lib/rfnoc/addsub.vhd" \
+
+# Do not sort compile order
+nosort
